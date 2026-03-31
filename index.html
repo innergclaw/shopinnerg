@@ -119,14 +119,46 @@ footer .copy{color:#ccc;font-size:12px}
   <div class="products" id="products">
     <div class="products-header">
       <h2>Latest Downloads</h2>
-      <span class="count">0 products</span>
+      <span class="count">3 products</span>
     </div>
     <div class="grid" id="product-grid">
-      <div class="empty-state">
-        <div class="emoji">🛒</div>
-        <h3>New products dropping soon</h3>
-        <p>We're loading up the shop with templates, tools, and resources for creatives. Join the newsletter to be the first to know.</p>
+
+      <div class="card" data-cat="education">
+        <div class="card-img" style="background:linear-gradient(135deg,#F0EEFF,#E8E5FF)">🧠<div class="tag">Education</div></div>
+        <div class="card-body">
+          <h3>InnerG Prompt Vault</h3>
+          <p>1,389+ curated AI image prompts for creators who actually ship. Photography, illustration, product, food — organized and ready to use.</p>
+          <div class="card-footer">
+            <div class="price">$29</div>
+            <a href="https://buy.stripe.com/28E28tesD7yh4X4cyfao80r" class="buy">Get It →</a>
+          </div>
+        </div>
       </div>
+
+      <div class="card" data-cat="templates design">
+        <div class="card-img" style="background:linear-gradient(135deg,#E8F5E9,#F1F8E9)">📁<div class="tag">Template</div></div>
+        <div class="card-body">
+          <h3>Logo File System Template</h3>
+          <p>The exact folder structure professional designers use. 5 variations, 6 formats, digital + print. Pre-built ZIP — just add your files.</p>
+          <div class="card-footer">
+            <div class="price">$9</div>
+            <a href="https://buy.stripe.com/3cI14pfwHdWFahoeGnao80B" class="buy">Get It →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="business">
+        <div class="card-img" style="background:linear-gradient(135deg,#FFF3E0,#FFF8E1)">💬<div class="tag">Community</div></div>
+        <div class="card-body">
+          <h3>InnerG Intel Discord Access</h3>
+          <p>Join the community of creative strategists, prompt engineers, and urban visionaries. Networking, resources, and real conversations.</p>
+          <div class="card-footer">
+            <div class="price">$10</div>
+            <a href="https://buy.stripe.com/aFa4gBdozbOxgFM8hZao80a" class="buy">Get It →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -169,6 +201,11 @@ document.querySelectorAll('.cat-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
+    const cat=btn.textContent.toLowerCase();
+    document.querySelectorAll('.card').forEach(c=>{
+      const tags=c.dataset.cat||'';
+      c.style.display=(cat==='all'||tags.includes(cat))?'':'none';
+    });
   });
 });
 
