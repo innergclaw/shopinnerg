@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopInnerG — Resources for Creatives & Professionals</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#FAFAF8;color:#1a1a1a;overflow-x:hidden}
+.page{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #eee}
+nav .logo{font-size:20px;font-weight:800;letter-spacing:-0.5px}
+nav .logo span{background:linear-gradient(135deg,#6C63FF,#8B83FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+nav .nav-links{display:flex;gap:28px}
+nav a{color:#888;text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+nav a:hover{color:#1a1a1a}
+
+/* HERO */
+.hero{padding:80px 0 60px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#F0EEFF;color:#6C63FF;padding:6px 16px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.hero-badge::before{content:'🛒'}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.15;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 .accent{background:linear-gradient(135deg,#6C63FF,#00B4D8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#666;font-size:17px;max-width:540px;margin:0 auto;line-height:1.7}
+
+/* CATEGORIES */
+.categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:48px}
+.cat-btn{padding:10px 22px;border-radius:50px;border:1px solid #e5e5e5;background:#fff;color:#666;font-size:13px;font-weight:600;cursor:pointer;transition:all .25s}
+.cat-btn:hover,.cat-btn.active{background:#6C63FF;color:#fff;border-color:#6C63FF}
+
+/* PRODUCTS GRID */
+.products{padding-bottom:60px}
+.products-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.products-header h2{font-size:22px;font-weight:800}
+.products-header .count{color:#aaa;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+
+/* PRODUCT CARD */
+.card{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
+.card-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}
+.card-img .tag{position:absolute;top:12px;left:12px;background:#fff;color:#1a1a1a;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid #eee}
+.card-body{padding:20px}
+.card-body h3{font-size:17px;font-weight:700;margin-bottom:6px}
+.card-body p{color:#888;font-size:13px;line-height:1.6;margin-bottom:16px}
+.card-footer{display:flex;justify-content:space-between;align-items:center}
+.card-footer .price{font-size:22px;font-weight:800}
+.card-footer .price .old{font-size:14px;color:#ccc;text-decoration:line-through;font-weight:400;margin-left:4px}
+.card-footer .buy{padding:8px 20px;background:#6C63FF;color:#fff;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:.5px;transition:all .2s;border:none;cursor:pointer}
+.card-footer .buy:hover{background:#5a52e0}
+
+/* FEATURES */
+.features{padding:60px 0;border-top:1px solid #eee}
+.features h2{text-align:center;font-size:28px;font-weight:800;margin-bottom:40px}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.feat{text-align:center;padding:24px}
+.feat .icon{font-size:32px;margin-bottom:12px}
+.feat h4{font-size:15px;font-weight:700;margin-bottom:6px}
+.feat p{color:#888;font-size:13px;line-height:1.6}
+
+/* NEWSLETTER */
+.newsletter{padding:60px 0;text-align:center}
+.newsletter-box{background:linear-gradient(135deg,#6C63FF,#8B83FF);border-radius:20px;padding:48px 32px;max-width:600px;margin:0 auto}
+.newsletter-box h2{color:#fff;font-size:24px;font-weight:800;margin-bottom:8px}
+.newsletter-box p{color:rgba(255,255,255,.8);font-size:14px;margin-bottom:24px}
+.newsletter-form{display:flex;gap:10px;max-width:400px;margin:0 auto}
+.newsletter-form input{flex:1;padding:12px 18px;border-radius:10px;border:none;font-size:14px;font-family:inherit;outline:none}
+.newsletter-form button{padding:12px 24px;background:#1a1a1a;color:#fff;border-radius:10px;font-weight:700;font-size:13px;border:none;cursor:pointer;transition:all .2s;white-space:nowrap}
+.newsletter-form button:hover{background:#333}
+
+/* FOOTER */
+footer{padding:40px 0;border-top:1px solid #eee;text-align:center}
+footer .logo{font-size:18px;font-weight:800;margin-bottom:12px}
+footer .logo span{background:linear-gradient(135deg,#6C63FF,#8B83FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+footer .links{display:flex;justify-content:center;gap:20px;margin-bottom:16px}
+footer .links a{color:#888;text-decoration:none;font-size:13px;transition:color .2s}
+footer .links a:hover{color:#6C63FF}
+footer .copy{color:#ccc;font-size:12px}
+
+/* COMING SOON STATE */
+.empty-state{text-align:center;padding:60px 20px;color:#aaa}
+.empty-state .emoji{font-size:48px;margin-bottom:16px}
+.empty-state h3{font-size:20px;font-weight:700;color:#666;margin-bottom:8px}
+.empty-state p{font-size:14px;max-width:400px;margin:0 auto;line-height:1.6}
+
+@media(max-width:600px){
+  nav .nav-links{display:none}
+  .grid{grid-template-columns:1fr}
+  .newsletter-form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <nav>
+    <div class="logo">Shop<span>InnerG</span></div>
+    <div class="nav-links"><a href="#products">Products</a><a href="#features">Why Us</a><a href="#newsletter">Stay Updated</a></div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">Digital Downloads</div>
+    <h1>Resources Built for<br><span class="accent">Creatives & Professionals</span></h1>
+    <p>Templates, tools, and systems to help you work smarter. Made by designers who actually ship.</p>
+  </div>
+
+  <div class="categories">
+    <div class="cat-btn active">All</div>
+    <div class="cat-btn">Design</div>
+    <div class="cat-btn">Templates</div>
+    <div class="cat-btn">Business</div>
+    <div class="cat-btn">Education</div>
+  </div>
+
+  <div class="products" id="products">
+    <div class="products-header">
+      <h2>Latest Downloads</h2>
+      <span class="count">0 products</span>
+    </div>
+    <div class="grid" id="product-grid">
+      <div class="empty-state">
+        <div class="emoji">🛒</div>
+        <h3>New products dropping soon</h3>
+        <p>We're loading up the shop with templates, tools, and resources for creatives. Join the newsletter to be the first to know.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features" id="features">
+    <h2>Why ShopInnerG?</h2>
+    <div class="feat-grid">
+      <div class="feat"><div class="icon">⚡</div><h4>Instant Download</h4><p>Get your files immediately after purchase. No waiting.</p></div>
+      <div class="feat"><div class="icon">🔄</div><h4>Use Forever</h4><p>One-time payment. Use on unlimited projects and clients.</p></div>
+      <div class="feat"><div class="icon">🎨</div><h4>Made by Designers</h4><p>Built by professionals who actually use these tools daily.</p></div>
+      <div class="feat"><div class="icon">💬</div><h4>Creator Support</h4><p>Questions? Reach out directly. Real humans, real help.</p></div>
+    </div>
+  </div>
+
+  <div class="newsletter" id="newsletter">
+    <div class="newsletter-box">
+      <h2>Get Notified First</h2>
+      <p>New resources, templates, and tools. Delivered to your inbox.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" id="email-input">
+        <button onclick="subscribe()">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="logo">Shop<span>InnerG</span></div>
+    <div class="links">
+      <a href="https://innergclaw.github.io/shopnasgfx/">ShopNasGfx</a>
+      <a href="https://innergclaw.gumroad.com/l/InnerGPromptVault">Prompt Vault</a>
+      <a href="https://instagram.com/innergexchange">Instagram</a>
+    </div>
+    <div class="copy">© 2026 ShopInnerG — Become Intelligence</div>
+  </footer>
+
+</div>
+
+<script>
+// Category filter
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+// Newsletter
+function subscribe(){
+  const email=document.getElementById('email-input').value;
+  if(!email||!email.includes('@'))return alert('Enter a valid email');
+  document.getElementById('email-input').value='';
+  alert('✅ You\'re on the list! We\'ll notify you when new products drop.');
+}
+</script>
+</body>
+</html>
