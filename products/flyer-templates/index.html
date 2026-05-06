@@ -3,124 +3,832 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>15 Plug & Play Flyer Templates — ShopInnerG</title>
-  <meta name="description" content="15 Plug & Play Flyer Templates. Just add your photos, swap your text, and post." />
+  <title>Promo Portal 2003 | 15 Plug &amp; Play Flyer Templates</title>
+  <meta name="description" content="Promo Portal 2003 — a playful early-2000s cartoon-style product page for 15 Plug & Play Flyer Templates." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#071109;
-      --panel:#0d1710;
-      --line:rgba(125,255,157,.14);
-      --text:#f5f8f4;
-      --muted:#b7c2b8;
-      --green:#7dff9d;
-      --green2:#2cd66a;
+    :root {
+      --lime: #b7ff17;
+      --purple: #5b23b6;
+      --orange: #ff7a00;
+      --yellow: #ffe600;
+      --red: #ff3b30;
+      --ink: #111111;
+      --white: #ffffff;
+      --cream: #fffef6;
+      --gloss: rgba(255,255,255,.4);
+      --shadow: 0 12px 0 rgba(0,0,0,.22);
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:'Inter',system-ui,sans-serif;
-      color:var(--text);
-      background:radial-gradient(circle at top left,rgba(44,214,106,.14),transparent 30%),#071109;
-      min-height:100vh;
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255,230,0,.85) 0 2%, transparent 2.1%),
+        radial-gradient(circle at 88% 24%, rgba(255,59,48,.65) 0 1.3%, transparent 1.4%),
+        radial-gradient(circle at 22% 76%, rgba(255,255,255,.45) 0 1.6%, transparent 1.7%),
+        radial-gradient(circle at 78% 78%, rgba(255,122,0,.45) 0 1.5%, transparent 1.6%),
+        linear-gradient(180deg, #7a37d7 0%, #4d1d9c 36%, #381378 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
     }
-    a{text-decoration:none;color:inherit}
-    .wrap{width:min(1120px,calc(100% - 28px));margin:0 auto}
-    .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0}
-    .brand{font-weight:800;letter-spacing:-.04em;font-size:1.05rem}.brand span{color:var(--green)}
-    .back{color:var(--muted);font-size:.95rem}.back:hover{color:var(--text)}
-    .hero{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center;padding:34px 0 60px}
-    .art{border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(13,23,16,.95),rgba(8,14,10,.95));padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.22)}
-    .art img{display:block;width:100%;height:auto;border-radius:18px}
-    .eyebrow{display:inline-block;margin-bottom:16px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--green);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:.92;letter-spacing:-.06em;margin-bottom:16px}
-    .sub{color:var(--muted);font-size:1.04rem;line-height:1.75;max-width:560px}
-    .price{display:flex;align-items:end;gap:16px;margin:22px 0 18px;flex-wrap:wrap}
-    .price strong{font-size:3rem;letter-spacing:-.06em}
-    .price span{color:var(--muted)}
-    .bullets{display:grid;gap:10px;margin:22px 0 28px}
-    .bullets div{padding:13px 15px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02);color:var(--muted)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 24px;border-radius:999px;font-weight:800}
-    .btn-primary{background:linear-gradient(135deg,var(--green),var(--green2));color:#041108}
-    .btn-secondary{border:1px solid var(--line);color:var(--text)}
-    .note{margin-top:14px;color:#8fa392;font-size:.9rem}
-    .section{padding:0 0 60px}
-    .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{padding:22px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.03)}
-    .card h3{margin-bottom:8px;font-size:1.02rem}.card p{color:var(--muted);line-height:1.7}
-    @media(max-width:900px){.hero,.mini{grid-template-columns:1fr}.hero{padding-top:12px}.art{order:-1}}
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      opacity: .16;
+      pointer-events: none;
+      filter: blur(2px);
+      z-index: 0;
+    }
+
+    body::before {
+      top: 70px;
+      left: -70px;
+      background: radial-gradient(circle, var(--lime), transparent 65%);
+    }
+
+    body::after {
+      right: -80px;
+      bottom: 40px;
+      background: radial-gradient(circle, var(--orange), transparent 65%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .page {
+      width: min(1180px, calc(100% - 22px));
+      margin: 0 auto;
+      padding: 18px 0 52px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tube,
+    .bubble,
+    .sticker {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .tube {
+      border: 4px solid var(--ink);
+      border-radius: 999px;
+      background: linear-gradient(180deg, #b8ff60, #7de204);
+      box-shadow: 0 8px 0 rgba(0,0,0,.18);
+    }
+
+    .tube.one { width: 140px; height: 28px; top: 110px; right: 18px; transform: rotate(16deg); }
+    .tube.two { width: 110px; height: 24px; left: 8px; top: 460px; transform: rotate(-24deg); background: linear-gradient(180deg, #ffc845, #ff8d11); }
+
+    .bubble {
+      border-radius: 50%;
+      border: 4px solid var(--ink);
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.25) 30%, rgba(255,255,255,.05) 65%);
+      box-shadow: 0 7px 0 rgba(0,0,0,.14);
+      animation: floaty 5s ease-in-out infinite;
+    }
+
+    .bubble.one { width: 38px; height: 38px; top: 180px; left: 30px; }
+    .bubble.two { width: 28px; height: 28px; top: 560px; right: 60px; animation-delay: .8s; }
+    .bubble.three { width: 18px; height: 18px; top: 720px; left: 48%; animation-delay: 1.6s; }
+
+    .sticker {
+      font-family: 'Baloo 2', cursive;
+      background: var(--yellow);
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      padding: 8px 14px;
+      box-shadow: 0 8px 0 rgba(0,0,0,.16);
+      transform: rotate(-8deg);
+      font-size: .92rem;
+      font-weight: 800;
+    }
+
+    .sticker.one { top: 96px; left: 10px; }
+    .sticker.two { right: 28px; top: 410px; transform: rotate(9deg); background: #ff9347; }
+
+    @keyframes floaty {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .portal-shell {
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
+      border: 5px solid var(--ink);
+      border-radius: 34px;
+      padding: 18px;
+      box-shadow: 0 16px 0 rgba(0,0,0,.24);
+      backdrop-filter: blur(6px);
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: linear-gradient(180deg, #fff9b8, #ffd738);
+      border: 5px solid var(--ink);
+      border-radius: 28px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--ink);
+      text-shadow: 2px 2px 0 rgba(255,255,255,.55);
+    }
+
+    .logo span { color: var(--purple); }
+
+    .top-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .nav-bubble,
+    .mini-badge,
+    .cta,
+    .arcade-card,
+    .poll-option,
+    .footer-link {
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+
+    .nav-bubble {
+      font-family: 'Baloo 2', cursive;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 4px solid var(--ink);
+      background: linear-gradient(180deg, #fff, #dff4ff 55%, #8de5ff 100%);
+      box-shadow: 0 7px 0 rgba(0,0,0,.16);
+      font-size: .95rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .nav-bubble:hover,
+    .cta:hover,
+    .arcade-card:hover,
+    .poll-option:hover,
+    .footer-link:hover {
+      transform: translateY(-4px) scale(1.02);
+      filter: brightness(1.03);
+    }
+
+    .mini-badge {
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(180deg, #ff694f, #ff2b21);
+      color: var(--white);
+      border: 4px solid var(--ink);
+      border-radius: 999px;
+      padding: 10px 14px;
+      box-shadow: 0 7px 0 rgba(0,0,0,.16);
+      font-weight: 800;
+      white-space: nowrap;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-copy,
+    .hero-preview,
+    .chunk-panel,
+    .poll-box,
+    .machine-banner,
+    .footer-bar {
+      border: 5px solid var(--ink);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      background: linear-gradient(180deg, #d6ff4f, #a0f10c 72%, #81d605 100%);
+      padding: 26px;
+    }
+
+    .portal-tag {
+      display: inline-block;
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      color: var(--white);
+      background: linear-gradient(180deg, #6e3bd4, #4b1ea1);
+      border: 4px solid var(--ink);
+      border-radius: 16px;
+      padding: 8px 14px;
+      margin-bottom: 16px;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.25);
+    }
+
+    h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: .92;
+      margin-bottom: 12px;
+      color: var(--white);
+      text-shadow: 4px 4px 0 var(--ink), 0 0 12px rgba(255,255,255,.35);
+    }
+
+    .subtitle {
+      font-size: 1.08rem;
+      max-width: 36ch;
+      color: #24113f;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 3px solid var(--ink);
+      background: rgba(255,255,255,.72);
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      font-size: .92rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 4px solid var(--ink);
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.02rem;
+      font-weight: 800;
+      box-shadow: 0 8px 0 rgba(0,0,0,.18);
+      text-align: center;
+    }
+
+    .cta.primary {
+      background: linear-gradient(180deg, #ffec7a, #ffad1f 65%, #ff7a00);
+      color: var(--ink);
+    }
+
+    .cta.secondary {
+      background: linear-gradient(180deg, #ff765a, #ff4437);
+      color: var(--white);
+      text-shadow: 1px 1px 0 rgba(0,0,0,.22);
+    }
+
+    .hero-preview {
+      background: linear-gradient(180deg, #7a43d7, #5024ab 68%, #381673);
+      padding: 18px;
+      display: grid;
+      align-items: center;
+    }
+
+    .monitor {
+      background: linear-gradient(180deg, #272727, #111111);
+      border: 5px solid var(--ink);
+      border-radius: 32px;
+      padding: 18px 18px 22px;
+      box-shadow: inset 0 0 0 3px rgba(255,255,255,.08), 0 10px 0 rgba(0,0,0,.18);
+      position: relative;
+    }
+
+    .monitor::before {
+      content: "PROMO PORTAL 2003";
+      position: absolute;
+      top: -14px;
+      left: 18px;
+      background: linear-gradient(180deg, #ffef74, #ffc219);
+      border: 4px solid var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      font-size: .84rem;
+      box-shadow: 0 5px 0 rgba(0,0,0,.18);
+    }
+
+    .screen {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%),
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,.12), transparent 42%),
+        linear-gradient(180deg, #c7fff0, #7ff0f3 45%, #4cb7ff 100%);
+      min-height: 420px;
+      border-radius: 22px;
+      border: 4px solid var(--ink);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screen::before,
+    .screen::after {
+      content: "";
+      position: absolute;
+      border: 4px solid var(--ink);
+      border-radius: 20px;
+      background: rgba(255,255,255,.18);
+    }
+
+    .screen::before {
+      width: 82px;
+      height: 82px;
+      top: 22px;
+      left: 18px;
+      transform: rotate(-7deg);
+    }
+
+    .screen::after {
+      width: 100px;
+      height: 52px;
+      right: 16px;
+      bottom: 28px;
+      transform: rotate(10deg);
+      background: rgba(255,230,0,.24);
+    }
+
+    .screen-label {
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(1.6rem, 3vw, 2.35rem);
+      line-height: 1.04;
+      color: var(--white);
+      text-shadow: 3px 3px 0 var(--ink);
+      max-width: 11ch;
+    }
+
+    .monitor-base {
+      width: 48%;
+      height: 22px;
+      margin: 12px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffd439, #ff930f);
+      border: 4px solid var(--ink);
+      box-shadow: 0 7px 0 rgba(0,0,0,.18);
+    }
+
+    .product-panels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .chunk-panel {
+      background: linear-gradient(180deg, #dbff72, #9ff40d 72%, #7bd000);
+      padding: 20px;
+    }
+
+    .chunk-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.28), transparent 34%);
+      pointer-events: none;
+    }
+
+    .chunk-panel.orange { border-color: var(--ink); }
+    .chunk-panel h2,
+    .zone-title,
+    .poll-title,
+    .machine-title {
+      font-family: 'Baloo 2', cursive;
+      line-height: .95;
+    }
+
+    .chunk-panel h2 {
+      font-size: 1.48rem;
+      margin-bottom: 10px;
+      color: var(--purple);
+      text-shadow: 1px 1px 0 rgba(255,255,255,.55);
+    }
+
+    .chunk-panel p {
+      color: #23113f;
+      font-weight: 700;
+    }
+
+    .zone-section,
+    .poll-box,
+    .machine-banner,
+    .footer-bar {
+      background: linear-gradient(180deg, #fffbdb, #ffd85e 18%, #ffb61a 100%);
+      margin-bottom: 20px;
+      padding: 22px;
+    }
+
+    .zone-section {
+      border: 5px solid var(--ink);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .zone-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--purple);
+      text-shadow: 2px 2px 0 rgba(255,255,255,.5);
+      margin-bottom: 14px;
+    }
+
+    .zone-sub {
+      font-weight: 700;
+      color: #3a214f;
+      margin-bottom: 18px;
+    }
+
+    .arcade-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .arcade-card {
+      min-height: 154px;
+      border: 5px solid var(--ink);
+      border-radius: 24px;
+      background: linear-gradient(180deg, #7d46df, #5226ac 62%, #331364);
+      padding: 16px 14px;
+      box-shadow: 0 9px 0 rgba(0,0,0,.18);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .arcade-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.22), transparent 28%);
+      pointer-events: none;
+    }
+
+    .arcade-card .icon {
+      font-size: 2rem;
+      filter: drop-shadow(2px 2px 0 rgba(0,0,0,.25));
+    }
+
+    .arcade-card h3 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.18rem;
+      line-height: .98;
+      text-shadow: 2px 2px 0 rgba(0,0,0,.35);
+    }
+
+    .arcade-card p {
+      font-size: .88rem;
+      color: rgba(255,255,255,.88);
+      font-weight: 700;
+    }
+
+    .poll-box {
+      background: linear-gradient(180deg, #d7ff69, #acef11 72%, #88d603 100%);
+    }
+
+    .poll-title {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      color: var(--purple);
+      text-shadow: 2px 2px 0 rgba(255,255,255,.55);
+      margin-bottom: 6px;
+    }
+
+    .poll-question {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.25rem;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: #29144a;
+    }
+
+    .poll-options {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .poll-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 16px;
+      border: 4px solid var(--ink);
+      border-radius: 20px;
+      background: rgba(255,255,255,.7);
+      box-shadow: 0 7px 0 rgba(0,0,0,.16);
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+    }
+
+    .poll-option span:last-child {
+      min-width: 84px;
+      text-align: right;
+      color: var(--purple);
+    }
+
+    .poll-note {
+      color: #2f164d;
+      font-weight: 800;
+      font-size: .98rem;
+    }
+
+    .machine-banner {
+      background: linear-gradient(180deg, #ff9158, #ff6c1f 58%, #e44d00 100%);
+      color: var(--white);
+    }
+
+    .machine-shell {
+      display: grid;
+      grid-template-columns: 1.18fr .82fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .machine-title {
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      line-height: .9;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 0 rgba(0,0,0,.32);
+    }
+
+    .machine-text {
+      font-size: 1.02rem;
+      max-width: 40ch;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.18);
+    }
+
+    .machine-cta-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+    }
+
+    .machine-cta {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      background: linear-gradient(180deg, #fff471, #ffd731 60%, #ff9a15);
+      color: var(--ink);
+    }
+
+    .footer-bar {
+      background: linear-gradient(180deg, #fffcc8, #ffe86e 22%, #ffc22a 100%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-link {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 4px solid var(--ink);
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 6px 0 rgba(0,0,0,.14);
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+    }
+
+    .footer-copy {
+      font-family: 'Baloo 2', cursive;
+      font-size: .95rem;
+      font-weight: 800;
+      color: #4a1d7d;
+    }
+
+    @media (max-width: 1080px) {
+      .arcade-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .product-panels,
+      .machine-shell,
+      .arcade-grid,
+      .hero-preview,
+      .hero-copy,
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        display: grid;
+      }
+
+      .product-panels { grid-template-columns: 1fr; }
+      .machine-shell { grid-template-columns: 1fr; }
+      .arcade-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 620px) {
+      .page { width: min(100% - 14px, 1180px); }
+      .portal-shell { padding: 12px; border-radius: 24px; }
+      .topbar,
+      .hero-copy,
+      .hero-preview,
+      .chunk-panel,
+      .zone-section,
+      .poll-box,
+      .machine-banner,
+      .footer-bar { border-radius: 22px; }
+      .top-links,
+      .footer-links,
+      .cta-row { justify-content: center; }
+      .arcade-grid { grid-template-columns: 1fr; }
+      .screen { min-height: 300px; }
+      .screen-label { max-width: 9ch; }
+      .bubble,
+      .sticker,
+      .tube { display: none; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="top">
-      <a class="brand" href="../../index.html">Shop<span>InnerG</span></a>
-      <a class="back" href="../../index.html">← Back to shop</a>
-    </header>
+  <div class="page">
+    <div class="tube one"></div>
+    <div class="tube two"></div>
+    <div class="bubble one"></div>
+    <div class="bubble two"></div>
+    <div class="bubble three"></div>
+    <div class="sticker one">NEW DROP!</div>
+    <div class="sticker two">POST FAST ⚡</div>
 
-    <main>
+    <div class="portal-shell">
+      <header class="topbar">
+        <a class="logo" href="../../index.html">Shop<span>InnerG</span></a>
+        <nav class="top-links" aria-label="Promo categories">
+          <a class="nav-bubble" href="#zones">Templates</a>
+          <a class="nav-bubble" href="#zones">Beauty</a>
+          <a class="nav-bubble" href="#zones">Food</a>
+          <a class="nav-bubble" href="#zones">Events</a>
+          <a class="nav-bubble" href="#zones">Credit</a>
+          <a class="nav-bubble" href="#zones">Club Promo</a>
+        </nav>
+        <div class="mini-badge">Digital Download • $10</div>
+      </header>
+
       <section class="hero">
-        <div>
-          <div class="eyebrow">Digital download • $10</div>
+        <div class="hero-copy">
+          <div class="portal-tag">Promo Portal 2003</div>
           <h1>15 Plug &amp; Play Flyer Templates</h1>
-          <p class="sub">Just add your photos, swap your text, and post. This pack is for quick promo work when you want the content to look clean without rebuilding a design from scratch every time.</p>
-          <div class="price">
-            <strong>$10</strong>
-            <span>One-time payment</span>
+          <p class="subtitle">Your photo here. Your text there. Post-ready in minutes.</p>
+
+          <div class="hero-pills">
+            <div class="pill">Beauty</div>
+            <div class="pill">Food</div>
+            <div class="pill">Events</div>
+            <div class="pill">Credit</div>
+            <div class="pill">Club Promo</div>
           </div>
-          <div class="bullets">
-            <div>15 ready-made flyer layouts</div>
-            <div>Made for quick photo swaps and easy edits</div>
-            <div>Good for promos, events, products, and service posts</div>
+
+          <div class="cta-row">
+            <a class="cta primary" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy The Pack ~ $10</a>
+            <a class="cta secondary" href="#inside">See What’s Inside</a>
           </div>
-          <div class="cta">
-            <a class="btn btn-primary" id="buy-now" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy now →</a>
-            <a class="btn btn-secondary" href="#details">See details</a>
-          </div>
-          <p class="note">Instant Stripe checkout.</p>
         </div>
 
-        <div class="art">
-          <img src="./assets/15flyerpack.png" alt="15 Plug & Play Flyer Templates preview" />
+        <div class="hero-preview">
+          <div class="monitor">
+            <div class="screen">
+              <div class="screen-label">Drop Your Flyer Preview Here</div>
+            </div>
+            <div class="monitor-base"></div>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="details">
-        <div class="mini">
-          <article class="card">
-            <h3>Fast content days</h3>
-            <p>When you need to get a promo out fast, this pack keeps you from starting at zero.</p>
+      <section class="product-panels" id="inside">
+        <article class="chunk-panel">
+          <h2>15 Ready-Made Layouts</h2>
+          <p>Beauty, food, event, credit, and club promo styles made for fast content days.</p>
+        </article>
+        <article class="chunk-panel">
+          <h2>Easy Photo Swap</h2>
+          <p>Built for simple editing. Replace the image, change the words, and post.</p>
+        </article>
+        <article class="chunk-panel">
+          <h2>Made For Promoters</h2>
+          <p>Perfect for barbers, lash techs, food brands, lounges, party hosts, and service providers.</p>
+        </article>
+      </section>
+
+      <section class="zone-section" id="zones">
+        <h2 class="zone-title">Choose Your Promo Zone</h2>
+        <p class="zone-sub">Pick the lane, swap the photo, and keep the promo moving.</p>
+
+        <div class="arcade-grid">
+          <article class="arcade-card">
+            <div class="icon">💄</div>
+            <h3>Beauty Flyers</h3>
+            <p>Salon drops, lash promos, and service posts.</p>
           </article>
-          <article class="card">
-            <h3>Simple buy flow</h3>
-            <p>This page leads straight into Stripe with no extra clutter in the way.</p>
+          <article class="arcade-card">
+            <div class="icon">💳</div>
+            <h3>Credit Repair Flyers</h3>
+            <p>Clean trust-forward layouts with clear CTA room.</p>
           </article>
-          <article class="card">
-            <h3>Built to test the offer</h3>
-            <p>Clean enough to run traffic to and see if people actually move on it.</p>
+          <article class="arcade-card">
+            <div class="icon">🍔</div>
+            <h3>Food &amp; Lounge Flyers</h3>
+            <p>Menus, specials, kitchens, bars, and lounge nights.</p>
+          </article>
+          <article class="arcade-card">
+            <div class="icon">☀️</div>
+            <h3>Day Party Flyers</h3>
+            <p>Bright promo energy for outside events and vibes.</p>
+          </article>
+          <article class="arcade-card">
+            <div class="icon">🎵</div>
+            <h3>Club Promo Flyers</h3>
+            <p>Nightlife layouts built for motion, lights, and noise.</p>
           </article>
         </div>
       </section>
-    </main>
+
+      <section class="poll-box">
+        <h2 class="poll-title">ShopInnerG Poll</h2>
+        <p class="poll-question">Would you rather spend 2 hours designing… or 2 minutes swapping your photo?</p>
+
+        <div class="poll-options">
+          <div class="poll-option"><span>Start from scratch</span><span>12%</span></div>
+          <div class="poll-option"><span>Plug &amp; play</span><span>88%</span></div>
+        </div>
+
+        <p class="poll-note">Smart creators pick speed.</p>
+      </section>
+
+      <section class="machine-banner">
+        <div class="machine-shell">
+          <div>
+            <h2 class="machine-title">Stop Starting From Zero.</h2>
+            <p class="machine-text">Grab the flyer template pack, customize it, and start posting cleaner promos today.</p>
+          </div>
+          <div class="machine-cta-wrap">
+            <a class="cta machine-cta" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy Now Through Stripe</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-bar">
+        <div class="footer-links">
+          <a class="footer-link" href="#">Safety &amp; Privacy</a>
+          <a class="footer-link" href="#">Terms</a>
+          <a class="footer-link" href="#">Contact</a>
+          <a class="footer-link" href="#">About</a>
+          <a class="footer-link" href="../../index.html">ShopInnerG</a>
+        </div>
+        <div class="footer-copy">Promo Portal 2003 // Plug in, swap out, post up.</div>
+      </footer>
+    </div>
   </div>
-
-  <script>
-    const COUNT_NAMESPACE = 'innergclaw-shopinnerg';
-    const VIEW_KEY = 'flyer-templates-pageviews';
-    const CLICK_KEY = 'flyer-templates-clicks';
-
-    async function hitCounter(key) {
-      try {
-        await fetch(`https://api.countapi.xyz/hit/${COUNT_NAMESPACE}/${key}`, { method:'GET', mode:'cors', cache:'no-store' });
-      } catch (error) {
-        console.warn('Counter skipped', error);
-      }
-    }
-
-    document.getElementById('buy-now').addEventListener('click', () => hitCounter(CLICK_KEY));
-    hitCounter(VIEW_KEY);
-  </script>
 </body>
 </html>
