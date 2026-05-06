@@ -751,6 +751,99 @@
       box-shadow: 4px 4px 0 var(--line);
     }
 
+    .prompt-preview {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .prompt-category {
+      border: 4px solid var(--line);
+      background: var(--paper);
+      box-shadow: 10px 12px 0 rgba(13,13,13,.16);
+      overflow: hidden;
+    }
+
+    .prompt-category-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 4px solid var(--line);
+      background: var(--ink);
+      color: var(--white);
+      padding: 14px 16px;
+    }
+
+    .prompt-category-head h3 {
+      margin: 0;
+      font-family: Anton, Impact, sans-serif;
+      font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .prompt-category-head span {
+      flex: 0 0 auto;
+      border: 2px solid var(--line);
+      background: var(--lime);
+      color: var(--ink);
+      padding: 6px 8px;
+      box-shadow: 4px 4px 0 rgba(255,255,255,.22);
+      font-size: .72rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .prompt-list {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+    }
+
+    .prompt-tease {
+      position: relative;
+      min-height: 116px;
+      border: 3px solid var(--line);
+      background: var(--white);
+      padding: 14px;
+      overflow: hidden;
+    }
+
+    .prompt-tease strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: .86rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .prompt-tease p {
+      margin: 0;
+      color: var(--graphite);
+      font-size: .72rem;
+      font-weight: 750;
+      line-height: 1.45;
+      filter: blur(4px);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .prompt-tease::after {
+      content: "included after purchase";
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      border: 2px solid var(--line);
+      background: var(--amber);
+      padding: 6px 8px;
+      box-shadow: 4px 4px 0 rgba(13,13,13,.18);
+      font-size: .62rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
     @keyframes promptIn {
       0%, 8% { transform: translateX(-80px); opacity: 0; }
       18%, 88% { transform: translateX(0); opacity: 1; }
@@ -973,6 +1066,10 @@
       .quick-use ol {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .prompt-preview {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 720px) {
@@ -1109,6 +1206,11 @@
 
       .quick-use li {
         min-height: auto;
+      }
+
+      .prompt-category-head {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
       .section {
@@ -1255,6 +1357,48 @@
               <li>Download your flyer.</li>
               <li>Post it or send it to clients.</li>
             </ol>
+          </div>
+          <div class="prompt-preview" aria-label="Sample prompt industries with locked prompt previews">
+            <article class="prompt-category">
+              <div class="prompt-category-head">
+                <h3>Beauty</h3>
+                <span>3 prompts</span>
+              </div>
+              <div class="prompt-list">
+                <div class="prompt-tease">
+                  <strong>Luxury lash tech promo</strong>
+                  <p>Create a luxury beauty flyer for a lash technician, black and nude palette, soft glow lighting, elegant feminine typography, centered model portrait, glossy skin effect, booking call-to-action, service highlights, and contact section.</p>
+                </div>
+                <div class="prompt-tease">
+                  <strong>Bold wig install ad</strong>
+                  <p>Create a high-energy hair stylist flyer for wig installs, vibrant pink and black palette, model with styled hair, bold modern fonts, same-day appointment messaging, service details, and booking call-to-action.</p>
+                </div>
+                <div class="prompt-tease">
+                  <strong>Skincare facial promo</strong>
+                  <p>Create a clean minimal skincare flyer, white and beige tones, spa aesthetic, glowing skin close-up, soft serif fonts, refresh your skin headline, services list, booking info, and premium treatment feel.</p>
+                </div>
+              </div>
+            </article>
+            <article class="prompt-category">
+              <div class="prompt-category-head">
+                <h3>Credit / Business</h3>
+                <span>3 prompts</span>
+              </div>
+              <div class="prompt-list">
+                <div class="prompt-tease">
+                  <strong>Credit repair ad</strong>
+                  <p>Create a professional credit repair flyer, blue and white corporate style, confident client image, bold fix your credit headline, bullet points for removing negatives, increasing score, and fast results.</p>
+                </div>
+                <div class="prompt-tease">
+                  <strong>Funding approval promo</strong>
+                  <p>Create a modern business funding ad, black and gold theme, entrepreneur lifestyle image, bold approval headline, benefit-driven copy, strong call-to-action, and premium business growth energy.</p>
+                </div>
+                <div class="prompt-tease">
+                  <strong>Tax prep service</strong>
+                  <p>Create a tax service flyer, green and white palette, professional client image, stress-free filing message, refund highlights, trust-building copy, contact info, and simple service call-to-action.</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
