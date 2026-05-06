@@ -20,12 +20,13 @@
       --blue-bright: #6fd1ff;
       --text: #f4f8ff;
       --muted: #a7b8cf;
+      --success: #7cf7bf;
       --shadow: 0 30px 80px rgba(0,0,0,0.45);
       --radius: 24px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', sans-serif;
       background:
@@ -50,8 +51,6 @@
       opacity: 0.35;
     }
 
-    a { text-decoration: none; color: inherit; }
-
     .shell {
       width: min(1180px, calc(100% - 28px));
       margin: 0 auto;
@@ -59,44 +58,6 @@
       position: relative;
       z-index: 1;
     }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: 6px 4px 24px;
-    }
-
-    .logo {
-      font-size: 1.05rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .logo::before {
-      content: '>';
-      color: var(--blue-bright);
-    }
-
-    .logo span { color: var(--blue-bright); }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover { color: var(--blue-bright); }
 
     .hero {
       border: 1px solid var(--line);
@@ -269,7 +230,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      margin-bottom: 24px;
     }
 
     .card {
@@ -328,53 +288,53 @@
       font-size: 0.92rem;
     }
 
-    .product-stack {
+    .offer-list {
       display: grid;
-      gap: 14px;
+      gap: 12px;
       margin-top: 18px;
     }
 
-    .product-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
+    .offer-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
       align-items: center;
-      padding: 16px 18px;
+      padding: 16px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.06);
       background: rgba(255,255,255,0.02);
     }
 
-    .product-row-copy strong {
+    .offer-copy strong {
       display: block;
       margin-bottom: 4px;
       font-size: 0.98rem;
     }
 
-    .product-row-copy span {
+    .offer-copy span {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
-    .product-row-meta {
-      text-align: right;
-      flex-shrink: 0;
+    .offer-meta {
+      display: grid;
+      justify-items: end;
+      gap: 8px;
     }
 
-    .product-row-meta .price {
-      display: block;
+    .offer-price {
       font-family: 'Orbitron', sans-serif;
       font-size: 1rem;
-      margin-bottom: 8px;
+      color: var(--text);
     }
 
     .button {
       display: inline-block;
       border: none;
       border-radius: 999px;
-      padding: 12px 18px;
+      padding: 14px 18px;
       font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       cursor: pointer;
       color: #041120;
       background: linear-gradient(90deg, var(--blue), var(--blue-bright));
@@ -387,8 +347,14 @@
       box-shadow: 0 22px 50px rgba(87,164,255,0.35);
     }
 
-    .full {
-      margin-bottom: 24px;
+    .footer-card {
+      margin-top: 24px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding-top: 24px;
     }
 
     .footer-links {
@@ -399,10 +365,8 @@
       margin-bottom: 12px;
     }
 
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 10px 0 0;
+    .footer-links a:hover {
+      color: var(--blue-bright);
     }
 
     @media (max-width: 980px) {
@@ -420,166 +384,155 @@
 
     @media (max-width: 640px) {
       .shell { width: min(100% - 18px, 1180px); }
-      nav { padding: 4px 2px 18px; }
-      .nav-links { display: none; }
       .hero-grid, .card { padding: 22px; }
       .hero-art,
       .hero-art img { min-height: 440px; }
       h1 { letter-spacing: -1.5px; }
-      .product-row { flex-direction: column; align-items: flex-start; }
-      .product-row-meta { text-align: left; }
+      .offer-item { grid-template-columns: 1fr; }
+      .offer-meta { justify-items: start; }
     }
   </style>
 </head>
 <body>
   <div class="grid-bg"></div>
   <main class="shell">
-    <nav>
-      <a class="logo" href="#top">InnerG <span>Intel Store</span></a>
-      <div class="nav-links">
-        <a href="#offers">Offers</a>
-        <a href="#system">System</a>
-        <a href="https://innergclaw.github.io/innerg-ai-program-signup/">Program</a>
-      </div>
-    </nav>
-
-    <section class="hero" id="top">
+    <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">InnerG Intel storefront</div>
+          <div class="eyebrow">Storefront now live</div>
           <h1>InnerG Intel Store</h1>
-          <p>A digital shelf for the templates, prompt resources, and community access points built inside the InnerG Intel world.</p>
+          <p>A curated storefront for the digital products, prompt tools, flyer packs, and access points built inside the InnerG Intel ecosystem.</p>
 
           <div class="message-box">
             <strong>The Message</strong>
-            <p>“The store shouldn’t feel separate from the movement. Same signal. Same world. Different purpose.”</p>
+            <p>“The store is part of the same world. Same signal. Same cyber feel. Different purpose.”</p>
           </div>
 
           <div class="hero-points">
             <div class="point">
               <h3>Get Resources</h3>
-              <p>Templates and prompt tools you can use right away.</p>
+              <p>Templates and prompt tools you can actually use now.</p>
             </div>
             <div class="point">
-              <h3>Join the Access</h3>
-              <p>Tap into the InnerG community and learning lane.</p>
+              <h3>Buy Clean</h3>
+              <p>Simple purchase flow without losing the InnerG identity.</p>
             </div>
             <div class="point">
-              <h3>Move Cleaner</h3>
-              <p>Everything here is meant to sharpen how you build.</p>
+              <h3>Stay in System</h3>
+              <p>Products, program, and community all tied together.</p>
             </div>
           </div>
         </div>
 
         <div class="hero-art">
-          <img src="products/flyer-templates/assets/15flyerpack.png" alt="15 Plug and Play Flyer Templates cover art">
+          <img src="products/flyer-templates/assets/15flyerpack.png" alt="15 Plug & Play Flyer Templates artwork">
           <div class="hero-overlay-card">
-            <h3>Featured Drop</h3>
-            <p><strong>15 Plug &amp; Play Flyer Templates</strong> is live now for <strong>$10</strong> and built for fast promo work.</p>
+            <h3>Featured Offer</h3>
+            <p>15 Plug &amp; Play Flyer Templates — built for fast promo work, live now for <strong>$10</strong>.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="content-grid" id="offers">
+    <section class="content-grid">
       <article class="card">
-        <div class="tag">Templates & digital products</div>
-        <h2>Browse what’s live right now</h2>
-        <p>Not filler. Not placeholder packs. Just the active InnerG offers that are actually ready to move.</p>
+        <div class="tag">Active offers</div>
+        <h2>What’s available right now</h2>
+        <p>The current product lane. Focused, clean, and aligned with the same visual world as the program page.</p>
 
         <div class="info-list">
           <div class="info-item">
-            <strong>What’s here</strong>
-            <span>Prompt packs, template systems, and digital downloads built for creators and builders.</span>
+            <strong>Product type</strong>
+            <span>Prompt resources, templates, systems, and InnerG access products.</span>
           </div>
           <div class="info-item">
-            <strong>How it’s set up</strong>
-            <span>Each offer gets a clean path from page view to checkout without losing the InnerG visual language.</span>
+            <strong>Who it’s for</strong>
+            <span>Creators, builders, students, and people trying to move smarter with AI and design tools.</span>
           </div>
           <div class="info-item">
-            <strong>What to expect</strong>
-            <span>Fast buys, clear product framing, and direct links into the ecosystem.</span>
+            <strong>How it fits</strong>
+            <span>The store equips. The program teaches. The community connects.</span>
           </div>
         </div>
 
-        <div class="product-stack">
-          <div class="product-row">
-            <div class="product-row-copy">
+        <div class="offer-list">
+          <div class="offer-item">
+            <div class="offer-copy">
               <strong>InnerG Prompt Vault</strong>
-              <span>1,389+ AI image prompts curated for real creative use.</span>
+              <span>1,389+ curated AI image prompts organized for real creative use.</span>
             </div>
-            <div class="product-row-meta">
-              <span class="price">$29</span>
+            <div class="offer-meta">
+              <div class="offer-price">$29</div>
               <a class="button" href="https://buy.stripe.com/28E28tesD7yh4X4cyfao80r">Get it</a>
             </div>
           </div>
 
-          <div class="product-row">
-            <div class="product-row-copy">
+          <div class="offer-item">
+            <div class="offer-copy">
               <strong>Logo File System Template</strong>
-              <span>Clean structure for delivering logo work without chaos.</span>
+              <span>Delivery structure for logo work with clean exports and no mess.</span>
             </div>
-            <div class="product-row-meta">
-              <span class="price">$9</span>
+            <div class="offer-meta">
+              <div class="offer-price">$9</div>
               <a class="button" href="https://buy.stripe.com/3cI14pfwHdWFahoeGnao80B">Get it</a>
             </div>
           </div>
 
-          <div class="product-row">
-            <div class="product-row-copy">
+          <div class="offer-item">
+            <div class="offer-copy">
               <strong>15 Plug &amp; Play Flyer Templates</strong>
               <span>Add your photos, swap the text, and move fast.</span>
             </div>
-            <div class="product-row-meta">
-              <span class="price">$10</span>
+            <div class="offer-meta">
+              <div class="offer-price">$10</div>
               <a class="button" href="./products/flyer-templates/">View offer</a>
             </div>
           </div>
 
-          <div class="product-row">
-            <div class="product-row-copy">
+          <div class="offer-item">
+            <div class="offer-copy">
               <strong>InnerG Intel Discord Access</strong>
               <span>Entry point into the community layer of the ecosystem.</span>
             </div>
-            <div class="product-row-meta">
-              <span class="price">$10</span>
+            <div class="offer-meta">
+              <div class="offer-price">$10</div>
               <a class="button" href="https://buy.stripe.com/aFa4gBdozbOxgFM8hZao80a">Join</a>
             </div>
           </div>
         </div>
       </article>
 
-      <article class="card" id="system">
-        <div class="tag">InnerG system</div>
-        <h2>Why this store should feel like the program page</h2>
-        <p>Because it’s part of the same machine. If the store looks detached, the brand gets weaker. This version stays in the same lane.</p>
+      <article class="card">
+        <div class="tag">Store logic</div>
+        <h2>Why this now matches the signup page</h2>
+        <p>This version uses the same structure language as the InnerG AI Program signup page instead of a loose interpretation.</p>
 
         <div class="info-list">
           <div class="info-item">
-            <strong>Same visual family</strong>
-            <span>Grid background, blue signal tones, Orbitron headers, dark panels, and layered glass-card feel.</span>
+            <strong>Same hero treatment</strong>
+            <span>Big Orbitron heading, glassy message box, grid background, and right-side feature art.</span>
           </div>
           <div class="info-item">
-            <strong>Same brand logic</strong>
-            <span>Program teaches. Store equips. Community connects. All three should feel related on sight.</span>
+            <strong>Same card rhythm</strong>
+            <span>Two-column content cards, soft blue lines, rounded panels, and stacked info blocks.</span>
           </div>
           <div class="info-item">
-            <strong>Same energy</strong>
-            <span>Futuristic, sharp, cyber, intentional — not generic e-commerce and not soft lifestyle branding.</span>
+            <strong>Same 90s cyber feel</strong>
+            <span>Not just blue — the whole layout language is built to sit in the same visual family.</span>
           </div>
         </div>
 
-        <div class="message-box" style="margin-top:18px; margin-bottom:0;">
+        <div class="message-box" style="margin-bottom:0;">
           <strong>Reference</strong>
-          <p>This homepage is now keyed directly to the <strong>InnerG AI Program Signup</strong> page structure instead of just borrowing the colors.</p>
+          <p>Directly matched to <strong>https://innergclaw.github.io/innerg-ai-program-signup/</strong> so the storefront reads like part of the same InnerG system.</p>
         </div>
       </article>
     </section>
 
-    <section class="card full">
-      <div class="tag">Next step</div>
-      <h2>Want the full program lane too?</h2>
-      <p>If someone needs the actual education page instead of the storefront, send them straight to the signup page and keep the product store for resources and paid offers.</p>
+    <section class="card footer-card">
+      <div class="tag">Program lane</div>
+      <h2>Need the education page instead?</h2>
+      <p>If someone should be routed into the actual program experience instead of the product storefront, send them straight to the AI Program signup page.</p>
       <div style="margin-top:18px;">
         <a class="button" href="https://innergclaw.github.io/innerg-ai-program-signup/">Open program page</a>
       </div>
