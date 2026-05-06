@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15 Plug & Play Flyer Templates — ShopInnerG</title>
+  <meta name="description" content="15 Plug & Play Flyer Templates. Just add your photos, swap your text, and post. Built for creators, promo pages, events, and fast content days." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0f0c;
+      --panel:#101611;
+      --panel-2:#141c16;
+      --line:rgba(140,255,176,.12);
+      --text:#f5f8f4;
+      --muted:#b7c1b8;
+      --green:#7dff9d;
+      --green-2:#30d86d;
+      --accent:#d8ffe2;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:'Inter',system-ui,sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(48,216,109,.18), transparent 32%),
+        radial-gradient(circle at 80% 20%, rgba(125,255,157,.10), transparent 28%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
+    a { color:inherit; text-decoration:none; }
+    .shell { width:min(1160px, calc(100% - 32px)); margin:0 auto; }
+    .topbar {
+      display:flex; justify-content:space-between; align-items:center; gap:16px;
+      padding:22px 0;
+    }
+    .brand { font-weight:800; letter-spacing:-.03em; font-size:1.05rem; }
+    .brand span { color:var(--green); }
+    .topbar nav { display:flex; gap:20px; color:var(--muted); font-size:.94rem; }
+    .topbar nav a:hover { color:var(--text); }
+    .hero {
+      display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center;
+      padding:48px 0 72px;
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px; padding:8px 14px;
+      border:1px solid var(--line); border-radius:999px; color:var(--green);
+      background:rgba(16,22,17,.9); font-size:.76rem; font-weight:700; letter-spacing:.08em;
+      text-transform:uppercase; margin-bottom:18px;
+    }
+    h1 {
+      font-family:'Playfair Display',serif; font-size:clamp(2.7rem, 6vw, 5rem);
+      line-height:.95; letter-spacing:-.05em; margin-bottom:18px;
+    }
+    .subhead { color:var(--muted); font-size:1.05rem; line-height:1.75; max-width:640px; }
+    .price-row { display:flex; align-items:end; gap:16px; margin:28px 0 22px; flex-wrap:wrap; }
+    .price { font-size:3rem; font-weight:800; letter-spacing:-.05em; }
+    .price-note { color:var(--muted); max-width:280px; line-height:1.5; }
+    .actions { display:flex; gap:14px; flex-wrap:wrap; margin:24px 0 18px; }
+    .btn {
+      appearance:none; border:none; cursor:pointer; border-radius:999px;
+      padding:16px 24px; font:inherit; font-weight:800; transition:.2s ease;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    }
+    .btn-primary { background:linear-gradient(135deg, var(--green), var(--green-2)); color:#041108; box-shadow:0 18px 45px rgba(48,216,109,.18); }
+    .btn-primary:hover { transform:translateY(-2px); }
+    .btn-secondary { background:transparent; color:var(--accent); border:1px solid var(--line); }
+    .btn-secondary:hover { background:rgba(255,255,255,.03); }
+    .trust { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .trust span {
+      padding:10px 14px; border:1px solid var(--line); border-radius:999px;
+      color:var(--muted); font-size:.88rem; background:rgba(255,255,255,.02);
+    }
+    .visual {
+      position:relative; min-height:540px; border:1px solid var(--line); border-radius:32px;
+      background:linear-gradient(180deg, rgba(20,28,22,.95), rgba(11,15,12,.92));
+      overflow:hidden; padding:24px;
+    }
+    .glow {
+      position:absolute; inset:auto -10% -25% auto; width:320px; height:320px;
+      background:radial-gradient(circle, rgba(125,255,157,.2), transparent 65%);
+      pointer-events:none;
+    }
+    .stack { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; position:relative; z-index:1; }
+    .template-card {
+      aspect-ratio:4/5; border-radius:24px; padding:16px; display:flex; flex-direction:column;
+      justify-content:space-between; border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 20px 40px rgba(0,0,0,.18);
+    }
+    .template-card:nth-child(1){ background:linear-gradient(160deg,#eafbf0,#b9f2c8); color:#08210f; }
+    .template-card:nth-child(2){ background:linear-gradient(160deg,#121214,#2a2a33); color:#fff; transform:translateY(28px); }
+    .template-card:nth-child(3){ background:linear-gradient(160deg,#f9efe3,#ead2b6); color:#24180f; }
+    .template-card:nth-child(4){ background:linear-gradient(160deg,#1c261f,#364a3b); color:#f0fff2; transform:translateY(28px); }
+    .template-tag { font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; opacity:.8; font-weight:800; }
+    .template-title { font-size:1.25rem; font-weight:800; line-height:1.05; max-width:12ch; }
+    .template-copy { font-size:.88rem; line-height:1.45; opacity:.78; }
+    .mini-metrics {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px;
+    }
+    .mini-metrics article {
+      padding:16px; border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,.03);
+    }
+    .mini-metrics strong { display:block; font-size:1.35rem; margin-bottom:4px; }
+    .mini-metrics span { color:var(--muted); font-size:.85rem; }
+    .section { padding:72px 0; border-top:1px solid var(--line); }
+    .section-head { max-width:760px; margin-bottom:28px; }
+    .section-head h2 { font-size:clamp(2rem,4vw,3rem); letter-spacing:-.05em; margin-bottom:14px; }
+    .section-head p { color:var(--muted); line-height:1.75; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .panel {
+      padding:24px; border:1px solid var(--line); border-radius:24px;
+      background:linear-gradient(180deg, rgba(16,22,17,.92), rgba(20,28,22,.88));
+    }
+    .panel h3 { margin-bottom:12px; font-size:1.15rem; }
+    .panel p, .panel li { color:var(--muted); line-height:1.7; }
+    .panel ul { padding-left:18px; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .step-number { color:var(--green); font-size:2rem; font-weight:800; margin-bottom:10px; }
+    .faq { display:grid; gap:14px; }
+    .faq details {
+      border:1px solid var(--line); border-radius:18px; padding:18px 20px; background:rgba(255,255,255,.02);
+    }
+    .faq summary { cursor:pointer; font-weight:700; }
+    .faq p { color:var(--muted); margin-top:12px; line-height:1.7; }
+    .footer-cta {
+      display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center;
+      padding:32px; border-radius:28px; border:1px solid var(--line);
+      background:linear-gradient(135deg, rgba(125,255,157,.08), rgba(16,22,17,.95));
+    }
+    .footer-cta p { color:var(--muted); line-height:1.7; }
+    footer { padding:28px 0 40px; color:var(--muted); font-size:.92rem; }
+    @media (max-width: 920px) {
+      .hero, .footer-cta, .grid-3, .steps { grid-template-columns:1fr; }
+      .visual { min-height:auto; }
+      .topbar nav { display:none; }
+    }
+    @media (max-width: 640px) {
+      .shell { width:min(100% - 24px, 1160px); }
+      .hero { padding-top:20px; }
+      .price { font-size:2.5rem; }
+      .stack { grid-template-columns:1fr 1fr; gap:12px; }
+      .template-card { border-radius:18px; padding:14px; }
+      .mini-metrics { grid-template-columns:1fr; }
+      .footer-cta { padding:24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../../index.html">Shop<span>InnerG</span></a>
+      <nav>
+        <a href="#what-you-get">What You Get</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="../../tracker/flyer-templates.html">Tracker</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Digital download • $10 one-time</div>
+          <h1>15 Plug &amp; Play Flyer Templates.<br>Just add your photos.</h1>
+          <p class="subhead">Built for fast promo days. Drop in your photo, swap the copy, export, and post. Clean layouts for creators, events, brands, products, and social pushes when you need something that looks polished without burning the whole day.</p>
+          <div class="price-row">
+            <div class="price">$10</div>
+            <p class="price-note">One clean pack. Fifteen ready-made flyer templates. No subscription. No fluff.</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="buy-now">Get the templates →</button>
+            <a class="btn btn-secondary" href="../../tracker/flyer-templates.html">View tracker</a>
+          </div>
+          <div class="trust">
+            <span>15 layouts included</span>
+            <span>Fast-edit friendly</span>
+            <span>Made for promo content</span>
+          </div>
+        </div>
+
+        <div class="visual">
+          <div class="stack">
+            <article class="template-card">
+              <div class="template-tag">Template 01</div>
+              <div>
+                <div class="template-title">Event Promo</div>
+                <p class="template-copy">Bold date block. Clean photo space. Fast post energy.</p>
+              </div>
+            </article>
+            <article class="template-card">
+              <div class="template-tag">Template 02</div>
+              <div>
+                <div class="template-title">Launch Flyer</div>
+                <p class="template-copy">For products, classes, drops, and limited-time pushes.</p>
+              </div>
+            </article>
+            <article class="template-card">
+              <div class="template-tag">Template 03</div>
+              <div>
+                <div class="template-title">Service Ad</div>
+                <p class="template-copy">Professional layout with room for offer, details, and CTA.</p>
+              </div>
+            </article>
+            <article class="template-card">
+              <div class="template-tag">Template 04</div>
+              <div>
+                <div class="template-title">Brand Feature</div>
+                <p class="template-copy">Use when you want the post to feel premium, not thrown together.</p>
+              </div>
+            </article>
+          </div>
+          <div class="mini-metrics">
+            <article><strong>10 min</strong><span>to swap photos and text</span></article>
+            <article><strong>15</strong><span>layouts in one pack</span></article>
+            <article><strong>1 link</strong><span>to start tracking clicks</span></article>
+          </div>
+          <div class="glow"></div>
+        </div>
+      </section>
+
+      <section class="section" id="what-you-get">
+        <div class="section-head">
+          <h2>What you actually get</h2>
+          <p>No mystery bundle language. Just a clean template pack built to move quick when content still needs to look intentional.</p>
+        </div>
+        <div class="grid-3">
+          <article class="panel">
+            <h3>Plug in your visuals</h3>
+            <p>These are made for quick photo swaps. If you already have the image, you’re halfway done.</p>
+          </article>
+          <article class="panel">
+            <h3>Use for different lanes</h3>
+            <p>Events, promos, product pushes, service ads, announcement posts, and social flyers when you need range.</p>
+          </article>
+          <article class="panel">
+            <h3>Lightweight buy flow</h3>
+            <p>This page pushes into your Stripe payment link and logs click interest so you can watch traction without overbuilding.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Simple funnel. Clean page. Track interest. Let Stripe handle the checkout.</p>
+        </div>
+        <div class="steps">
+          <article class="panel">
+            <div class="step-number">01</div>
+            <h3>Share this page</h3>
+            <p>Use this landing page instead of dropping the raw Stripe link everywhere. Cleaner presentation, better control.</p>
+          </article>
+          <article class="panel">
+            <div class="step-number">02</div>
+            <h3>Track button clicks</h3>
+            <p>CTA clicks are counted live through the tracker page so you can see interest building in real time.</p>
+          </article>
+          <article class="panel">
+            <div class="step-number">03</div>
+            <h3>Check purchase snapshots</h3>
+            <p>Stripe purchases get pulled into the tracker snapshot file. That gives you clicks, purchases, and conversion without a full custom backend.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-head">
+          <h2>Quick FAQ</h2>
+          <p>The basics, without the runaround.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Do I need any extra software to buy?</summary>
+            <p>No. Checkout runs through Stripe. The product delivery setup stays on your side.</p>
+          </details>
+          <details>
+            <summary>Can I use this page instead of the raw Stripe link?</summary>
+            <p>Yes — that’s the point. This page gives the product context and lets you track CTA clicks before checkout.</p>
+          </details>
+          <details>
+            <summary>How accurate is the tracker?</summary>
+            <p>Clicks are counted live from the button on this page. Purchase numbers come from Stripe snapshots, so they’re accurate for sales and revenue but only update when the snapshot file is refreshed.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="footer-cta">
+          <div>
+            <h2>Ready to see if it moves?</h2>
+            <p>Push traffic here first. If people are clicking, you’ll know. If they’re buying, Stripe will tell the truth. That’s enough to test the offer before you over-engineer it.</p>
+          </div>
+          <div class="actions" style="justify-content:flex-start; margin:0;">
+            <button class="btn btn-primary" id="buy-now-bottom">Buy for $10</button>
+            <a class="btn btn-secondary" href="../../tracker/flyer-templates.html">Open tracker</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      ShopInnerG • Built to sell clean, fast digital products.
+    </footer>
+  </div>
+
+  <script>
+    const STRIPE_URL = 'https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U';
+    const COUNT_NAMESPACE = 'innergclaw-shopinnerg';
+    const CLICK_KEY = 'flyer-templates-clicks';
+    const VIEW_KEY = 'flyer-templates-pageviews';
+
+    async function hitCounter(key) {
+      try {
+        await fetch(`https://api.countapi.xyz/hit/${COUNT_NAMESPACE}/${key}`, { method: 'GET', mode: 'cors', cache: 'no-store' });
+      } catch (error) {
+        console.warn('Counter skipped', error);
+      }
+    }
+
+    async function trackAndGo() {
+      const redirect = () => window.location.href = STRIPE_URL;
+      const timer = setTimeout(redirect, 500);
+      try {
+        await hitCounter(CLICK_KEY);
+      } finally {
+        clearTimeout(timer);
+        redirect();
+      }
+    }
+
+    document.getElementById('buy-now').addEventListener('click', trackAndGo);
+    document.getElementById('buy-now-bottom').addEventListener('click', trackAndGo);
+
+    hitCounter(VIEW_KEY);
+  </script>
+</body>
+</html>
