@@ -3,832 +3,1251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Promo Portal 2003 | 15 Plug &amp; Play Flyer Templates</title>
-  <meta name="description" content="Promo Portal 2003 — a playful early-2000s cartoon-style product page for 15 Plug & Play Flyer Templates." />
+  <title>OWNYOURWEB | 15 Plug &amp; Play Flyer Templates</title>
+  <meta name="description" content="OWNYOURWEB flyer template pack from the INNERGINTEL ECOSYSTEM for polished promo graphics, events, services, food, nightlife, beauty, and product launches." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --lime: #b7ff17;
-      --purple: #5b23b6;
-      --orange: #ff7a00;
-      --yellow: #ffe600;
-      --red: #ff3b30;
-      --ink: #111111;
+      --ink: #0d0d0d;
+      --paper: #fbfaf5;
       --white: #ffffff;
-      --cream: #fffef6;
-      --gloss: rgba(255,255,255,.4);
-      --shadow: 0 12px 0 rgba(0,0,0,.22);
+      --graphite: #232323;
+      --muted: #686761;
+      --line: #191919;
+      --lime: #c8ff2e;
+      --amber: #ffb000;
+      --coral: #ff4f32;
+      --cyan: #31d8ff;
+      --shadow: 0 12px 0 rgba(13, 13, 13, .18);
+      --soft: 0 18px 60px rgba(13, 13, 13, .16);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 12% 18%, rgba(255,230,0,.85) 0 2%, transparent 2.1%),
-        radial-gradient(circle at 88% 24%, rgba(255,59,48,.65) 0 1.3%, transparent 1.4%),
-        radial-gradient(circle at 22% 76%, rgba(255,255,255,.45) 0 1.6%, transparent 1.7%),
-        radial-gradient(circle at 78% 78%, rgba(255,122,0,.45) 0 1.5%, transparent 1.6%),
-        linear-gradient(180deg, #7a37d7 0%, #4d1d9c 36%, #381378 100%);
-      min-height: 100vh;
+        linear-gradient(90deg, rgba(13,13,13,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(13,13,13,.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: 32px 32px;
       overflow-x: hidden;
-      position: relative;
-    }
-
-    body::before,
-    body::after {
-      content: "";
-      position: fixed;
-      inset: auto;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      opacity: .16;
-      pointer-events: none;
-      filter: blur(2px);
-      z-index: 0;
-    }
-
-    body::before {
-      top: 70px;
-      left: -70px;
-      background: radial-gradient(circle, var(--lime), transparent 65%);
-    }
-
-    body::after {
-      right: -80px;
-      bottom: 40px;
-      background: radial-gradient(circle, var(--orange), transparent 65%);
     }
 
     a { color: inherit; text-decoration: none; }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     .page {
-      width: min(1180px, calc(100% - 22px));
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 18px 0 52px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 3px solid var(--line);
+      background: rgba(251, 250, 245, .92);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 3px solid var(--line);
+      background: var(--ink);
+      box-shadow: 5px 5px 0 var(--lime);
+      flex: 0 0 auto;
+    }
+
+    .brand-mark span:nth-child(1) { background: var(--lime); }
+    .brand-mark span:nth-child(2) { background: var(--amber); }
+    .brand-mark span:nth-child(3) { background: var(--coral); }
+    .brand-mark span:nth-child(4) { background: var(--cyan); }
+
+    .brand-text {
+      display: grid;
+      line-height: 1;
+    }
+
+    .brand-text strong {
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .brand-text small {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      border: 2px solid transparent;
+      padding: 0 10px;
+      font-size: .83rem;
+      font-weight: 800;
+      color: var(--graphite);
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      border-color: var(--line);
+      background: var(--white);
+      outline: none;
+    }
+
+    .nav .buy-mini {
+      border-color: var(--line);
+      background: var(--lime);
+      box-shadow: 4px 4px 0 var(--line);
+      margin-left: 6px;
+    }
+
+    .hero {
+      overflow: hidden;
+      border-bottom: 3px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(200,255,46,.72) 0 22%, transparent 22% 100%),
+        linear-gradient(315deg, rgba(49,216,255,.26) 0 28%, transparent 28% 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+      gap: 34px;
+      align-items: center;
+      padding: 48px 0 34px;
+      min-height: calc(100vh - 74px);
+      max-height: 860px;
+    }
+
+    .hero-grid > * {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 3px solid var(--line);
+      background: var(--white);
+      padding: 9px 12px;
+      box-shadow: 6px 6px 0 var(--line);
+      font-size: .78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: var(--coral);
+      border: 2px solid var(--line);
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: Anton, Impact, sans-serif;
+      font-size: clamp(4rem, 10vw, 9.6rem);
+      line-height: .82;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .hero-title-kicker {
+      color: transparent;
+      -webkit-text-stroke: 2px var(--line);
+      text-stroke: 2px var(--line);
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--graphite);
+      font-size: clamp(1rem, 1.8vw, 1.24rem);
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 3px solid var(--line);
+      padding: 0 18px;
+      font-size: .95rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 7px 7px 0 var(--line);
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translate(3px, 3px);
+      box-shadow: 4px 4px 0 var(--line);
+      outline: none;
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .btn.secondary {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .price-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 3px solid var(--line);
+      margin-top: 34px;
+      max-width: 690px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .price-strip div {
+      padding: 14px 16px;
+      min-width: 0;
+    }
+
+    .price-strip div + div {
+      border-left: 3px solid var(--line);
+    }
+
+    .price-strip b {
+      display: block;
+      font-family: Anton, Impact, sans-serif;
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .price-strip span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .product-wall {
+      position: relative;
+      min-height: 560px;
+      display: grid;
+      place-items: center;
+    }
+
+    .poster-stage {
+      position: relative;
+      width: min(100%, 500px);
+      height: 570px;
+    }
+
+    .flyer {
+      position: absolute;
+      width: 250px;
+      aspect-ratio: 4 / 5;
+      border: 4px solid var(--line);
+      background: var(--white);
+      box-shadow: 12px 14px 0 rgba(13,13,13,.24);
+      overflow: hidden;
+    }
+
+    .flyer img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flyer::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 2px solid rgba(13,13,13,.18);
+      pointer-events: none;
+    }
+
+    .flyer.preview::before {
+      display: none;
+    }
+
+    .flyer.one {
+      width: 226px;
+      aspect-ratio: 818 / 1280;
+      top: 64px;
+      left: 20px;
+      transform: rotate(-8deg);
+      background: var(--ink);
+      z-index: 2;
+    }
+
+    .flyer.two {
+      width: 260px;
+      aspect-ratio: 1024 / 1280;
+      top: 18px;
+      right: 10px;
+      transform: rotate(6deg);
+      background: var(--ink);
+      z-index: 3;
+    }
+
+    .flyer.three {
+      width: 235px;
+      aspect-ratio: 853 / 1280;
+      right: 84px;
+      bottom: 38px;
+      transform: rotate(-2deg);
+      background: var(--ink);
+      z-index: 4;
+    }
+
+    .flyer-four {
+      position: absolute;
+      left: 68px;
+      bottom: 20px;
+      width: 210px;
+      aspect-ratio: 4 / 5;
+      border: 4px solid var(--line);
+      background:
+        linear-gradient(90deg, var(--amber) 0 24%, transparent 24% 100%),
+        var(--ink);
+      transform: rotate(8deg);
+      box-shadow: 12px 14px 0 rgba(13,13,13,.2);
+      z-index: 1;
+    }
+
+    .flyer-title {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 24px;
+      font-family: Anton, Impact, sans-serif;
+      font-size: 2.7rem;
+      line-height: .86;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .flyer.two .flyer-title {
+      color: var(--white);
+      top: 18px;
+      bottom: auto;
+      font-size: 2.35rem;
+    }
+
+    .flyer.three .flyer-title {
+      color: var(--ink);
+      font-size: 2.2rem;
+    }
+
+    .flyer-label {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: fit-content;
+      border: 2px solid var(--line);
+      background: var(--white);
+      padding: 6px 8px;
+      font-size: .68rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .flyer.two .flyer-label {
+      top: auto;
+      bottom: 18px;
+      background: var(--amber);
+    }
+
+    .face-block {
+      position: absolute;
+      width: 82px;
+      height: 112px;
+      right: 20px;
+      top: 74px;
+      border: 3px solid var(--line);
+      background:
+        linear-gradient(180deg, #191919 0 24%, transparent 24% 100%),
+        linear-gradient(135deg, #ffd3bd, #a06b52);
+      border-radius: 46px 46px 4px 4px;
+    }
+
+    .badge {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 124px;
+      height: 124px;
+      right: 6px;
+      bottom: 126px;
+      border: 4px solid var(--line);
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 8px 8px 0 var(--line);
+      z-index: 6;
+      transform: rotate(9deg);
+      text-align: center;
+      font-weight: 1000;
+      text-transform: uppercase;
+      line-height: .95;
+      font-size: .95rem;
+    }
+
+    .scroll-hint {
+      margin-top: -16px;
+      padding: 0 0 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .scroll-hint span {
+      border: 3px solid var(--line);
+      background: var(--paper);
+      padding: 10px 14px;
+      font-size: .74rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 5px 5px 0 var(--line);
+    }
+
+    .section {
+      padding: 66px 0;
+      border-bottom: 3px solid var(--line);
+    }
+
+    .section.dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .section.amber {
+      background: var(--amber);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Anton, Impact, sans-serif;
+      font-size: clamp(2.4rem, 5.6vw, 5.2rem);
+      line-height: .9;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-weight: 650;
+    }
+
+    .dark .section-head p {
+      color: rgba(255,255,255,.72);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .category {
+      min-height: 178px;
+      border: 3px solid var(--line);
+      padding: 16px;
+      background: var(--white);
+      box-shadow: 7px 7px 0 var(--line);
+      display: grid;
+      align-content: space-between;
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .category:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 4px 4px 0 var(--line);
+    }
+
+    .category:nth-child(2) { background: var(--lime); }
+    .category:nth-child(3) { background: var(--cyan); }
+    .category:nth-child(4) { background: #ffe4d9; }
+    .category:nth-child(5) { background: var(--amber); }
+
+    .category small {
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .category:nth-child(2) small,
+    .category:nth-child(3) small,
+    .category:nth-child(5) small {
+      color: rgba(13,13,13,.58);
+    }
+
+    .category h3 {
+      margin: 0;
+      font-family: Anton, Impact, sans-serif;
+      font-size: 2rem;
+      line-height: .95;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .chat-demo {
+      margin-top: 34px;
+      border: 3px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(49,216,255,.34), transparent 42%),
+        var(--white);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 370px);
+      gap: 20px;
+      align-items: stretch;
+      overflow: hidden;
+    }
+
+    .chat-panel {
+      border: 3px solid var(--line);
+      background: var(--paper);
+      min-height: 410px;
+      padding: 16px;
+      display: grid;
+      align-content: end;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chat-panel::before {
+      content: "OWNYOURWEB CHAT";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      border-bottom: 3px solid var(--line);
+      padding-bottom: 12px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .chat-bubble {
+      width: fit-content;
+      max-width: min(420px, 100%);
+      border: 3px solid var(--line);
+      padding: 13px 14px;
+      box-shadow: 5px 5px 0 var(--line);
+      font-weight: 850;
+      line-height: 1.4;
       position: relative;
       z-index: 1;
     }
 
-    .tube,
-    .bubble,
-    .sticker {
-      position: absolute;
-      pointer-events: none;
-      z-index: 0;
+    .chat-bubble.prompt {
+      justify-self: end;
+      background: var(--lime);
+      animation: promptIn 5.6s ease-in-out infinite;
     }
 
-    .tube {
-      border: 4px solid var(--ink);
-      border-radius: 999px;
-      background: linear-gradient(180deg, #b8ff60, #7de204);
-      box-shadow: 0 8px 0 rgba(0,0,0,.18);
+    .chat-bubble.response {
+      background: var(--ink);
+      color: var(--white);
+      animation: responseIn 5.6s ease-in-out infinite;
     }
 
-    .tube.one { width: 140px; height: 28px; top: 110px; right: 18px; transform: rotate(16deg); }
-    .tube.two { width: 110px; height: 24px; left: 8px; top: 460px; transform: rotate(-24deg); background: linear-gradient(180deg, #ffc845, #ff8d11); }
+    .chat-bubble.typing {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      background: var(--white);
+      animation: typingHold 5.6s ease-in-out infinite;
+    }
 
-    .bubble {
+    .dot {
+      width: 9px;
+      height: 9px;
+      border: 2px solid var(--line);
+      background: var(--coral);
       border-radius: 50%;
-      border: 4px solid var(--ink);
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.25) 30%, rgba(255,255,255,.05) 65%);
-      box-shadow: 0 7px 0 rgba(0,0,0,.14);
-      animation: floaty 5s ease-in-out infinite;
+      animation: dotPulse .86s ease-in-out infinite;
     }
 
-    .bubble.one { width: 38px; height: 38px; top: 180px; left: 30px; }
-    .bubble.two { width: 28px; height: 28px; top: 560px; right: 60px; animation-delay: .8s; }
-    .bubble.three { width: 18px; height: 18px; top: 720px; left: 48%; animation-delay: 1.6s; }
+    .dot:nth-child(2) { animation-delay: .12s; background: var(--amber); }
+    .dot:nth-child(3) { animation-delay: .24s; background: var(--cyan); }
 
-    .sticker {
-      font-family: 'Baloo 2', cursive;
-      background: var(--yellow);
-      border: 4px solid var(--ink);
-      border-radius: 18px;
-      padding: 8px 14px;
-      box-shadow: 0 8px 0 rgba(0,0,0,.16);
-      transform: rotate(-8deg);
-      font-size: .92rem;
-      font-weight: 800;
-    }
-
-    .sticker.one { top: 96px; left: 10px; }
-    .sticker.two { right: 28px; top: 410px; transform: rotate(9deg); background: #ff9347; }
-
-    @keyframes floaty {
-      0%,100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .portal-shell {
-      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
-      border: 5px solid var(--ink);
-      border-radius: 34px;
+    .delivery-panel {
+      border: 3px solid var(--line);
+      background: var(--ink);
+      min-height: 410px;
       padding: 18px;
-      box-shadow: 0 16px 0 rgba(0,0,0,.24);
-      backdrop-filter: blur(6px);
-    }
-
-    .topbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      background: linear-gradient(180deg, #fff9b8, #ffd738);
-      border: 5px solid var(--ink);
-      border-radius: 28px;
-      padding: 14px 16px;
-      box-shadow: var(--shadow);
-      margin-bottom: 18px;
-    }
-
-    .logo {
-      font-family: 'Baloo 2', cursive;
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: var(--ink);
-      text-shadow: 2px 2px 0 rgba(255,255,255,.55);
-    }
-
-    .logo span { color: var(--purple); }
-
-    .top-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-    }
-
-    .nav-bubble,
-    .mini-badge,
-    .cta,
-    .arcade-card,
-    .poll-option,
-    .footer-link {
-      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-    }
-
-    .nav-bubble {
-      font-family: 'Baloo 2', cursive;
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 4px solid var(--ink);
-      background: linear-gradient(180deg, #fff, #dff4ff 55%, #8de5ff 100%);
-      box-shadow: 0 7px 0 rgba(0,0,0,.16);
-      font-size: .95rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .nav-bubble:hover,
-    .cta:hover,
-    .arcade-card:hover,
-    .poll-option:hover,
-    .footer-link:hover {
-      transform: translateY(-4px) scale(1.02);
-      filter: brightness(1.03);
-    }
-
-    .mini-badge {
-      font-family: 'Baloo 2', cursive;
-      background: linear-gradient(180deg, #ff694f, #ff2b21);
-      color: var(--white);
-      border: 4px solid var(--ink);
-      border-radius: 999px;
-      padding: 10px 14px;
-      box-shadow: 0 7px 0 rgba(0,0,0,.16);
-      font-weight: 800;
-      white-space: nowrap;
-      text-shadow: 1px 1px 0 rgba(0,0,0,.2);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.04fr .96fr;
-      gap: 18px;
-      margin-bottom: 20px;
-    }
-
-    .hero-copy,
-    .hero-preview,
-    .chunk-panel,
-    .poll-box,
-    .machine-banner,
-    .footer-bar {
-      border: 5px solid var(--ink);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-copy {
-      background: linear-gradient(180deg, #d6ff4f, #a0f10c 72%, #81d605 100%);
-      padding: 26px;
-    }
-
-    .portal-tag {
-      display: inline-block;
-      font-family: 'Baloo 2', cursive;
-      font-weight: 800;
-      color: var(--white);
-      background: linear-gradient(180deg, #6e3bd4, #4b1ea1);
-      border: 4px solid var(--ink);
-      border-radius: 16px;
-      padding: 8px 14px;
-      margin-bottom: 16px;
-      text-shadow: 1px 1px 0 rgba(0,0,0,.25);
-    }
-
-    h1 {
-      font-family: 'Baloo 2', cursive;
-      font-size: clamp(2.3rem, 5vw, 4.4rem);
-      line-height: .92;
-      margin-bottom: 12px;
-      color: var(--white);
-      text-shadow: 4px 4px 0 var(--ink), 0 0 12px rgba(255,255,255,.35);
-    }
-
-    .subtitle {
-      font-size: 1.08rem;
-      max-width: 36ch;
-      color: #24113f;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
-
-    .pill {
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 3px solid var(--ink);
-      background: rgba(255,255,255,.72);
-      font-family: 'Baloo 2', cursive;
-      font-weight: 800;
-      font-size: .92rem;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 56px;
-      padding: 14px 20px;
-      border-radius: 999px;
-      border: 4px solid var(--ink);
-      font-family: 'Baloo 2', cursive;
-      font-size: 1.02rem;
-      font-weight: 800;
-      box-shadow: 0 8px 0 rgba(0,0,0,.18);
-      text-align: center;
-    }
-
-    .cta.primary {
-      background: linear-gradient(180deg, #ffec7a, #ffad1f 65%, #ff7a00);
-      color: var(--ink);
-    }
-
-    .cta.secondary {
-      background: linear-gradient(180deg, #ff765a, #ff4437);
-      color: var(--white);
-      text-shadow: 1px 1px 0 rgba(0,0,0,.22);
-    }
-
-    .hero-preview {
-      background: linear-gradient(180deg, #7a43d7, #5024ab 68%, #381673);
-      padding: 18px;
-      display: grid;
-      align-items: center;
-    }
-
-    .monitor {
-      background: linear-gradient(180deg, #272727, #111111);
-      border: 5px solid var(--ink);
-      border-radius: 32px;
-      padding: 18px 18px 22px;
-      box-shadow: inset 0 0 0 3px rgba(255,255,255,.08), 0 10px 0 rgba(0,0,0,.18);
-      position: relative;
-    }
-
-    .monitor::before {
-      content: "PROMO PORTAL 2003";
-      position: absolute;
-      top: -14px;
-      left: 18px;
-      background: linear-gradient(180deg, #ffef74, #ffc219);
-      border: 4px solid var(--ink);
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-family: 'Baloo 2', cursive;
-      font-weight: 800;
-      font-size: .84rem;
-      box-shadow: 0 5px 0 rgba(0,0,0,.18);
-    }
-
-    .screen {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%),
-        radial-gradient(circle at 50% 35%, rgba(255,255,255,.12), transparent 42%),
-        linear-gradient(180deg, #c7fff0, #7ff0f3 45%, #4cb7ff 100%);
-      min-height: 420px;
-      border-radius: 22px;
-      border: 4px solid var(--ink);
       display: grid;
       place-items: center;
-      text-align: center;
-      padding: 24px;
+      overflow: hidden;
       position: relative;
+    }
+
+    .delivery-panel::before {
+      content: "DELIVERED";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      border: 2px solid var(--line);
+      background: var(--lime);
+      color: var(--ink);
+      padding: 7px 9px;
+      box-shadow: 4px 4px 0 var(--line);
+      font-size: .7rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      animation: stampPop 5.6s ease-in-out infinite;
+    }
+
+    .delivered-flyer {
+      width: min(82%, 270px);
+      aspect-ratio: 1024 / 1280;
+      border: 4px solid var(--line);
+      background: var(--white);
+      box-shadow: 12px 14px 0 rgba(255,255,255,.2);
+      transform: translateX(-42px) rotate(-8deg) scale(.82);
+      opacity: 0;
+      animation: flyerDeliver 5.6s ease-in-out infinite;
       overflow: hidden;
     }
 
-    .screen::before,
-    .screen::after {
-      content: "";
-      position: absolute;
-      border: 4px solid var(--ink);
-      border-radius: 20px;
-      background: rgba(255,255,255,.18);
+    .delivered-flyer img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    .screen::before {
-      width: 82px;
-      height: 82px;
-      top: 22px;
-      left: 18px;
-      transform: rotate(-7deg);
+    @keyframes promptIn {
+      0%, 8% { transform: translateX(-80px); opacity: 0; }
+      18%, 88% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(24px); opacity: 0; }
     }
 
-    .screen::after {
-      width: 100px;
-      height: 52px;
-      right: 16px;
-      bottom: 28px;
-      transform: rotate(10deg);
-      background: rgba(255,230,0,.24);
+    @keyframes typingHold {
+      0%, 22%, 76%, 100% { opacity: 0; transform: translateY(12px); }
+      31%, 62% { opacity: 1; transform: translateY(0); }
     }
 
-    .screen-label {
-      font-family: 'Baloo 2', cursive;
-      font-size: clamp(1.6rem, 3vw, 2.35rem);
-      line-height: 1.04;
-      color: var(--white);
-      text-shadow: 3px 3px 0 var(--ink);
-      max-width: 11ch;
+    @keyframes responseIn {
+      0%, 48% { opacity: 0; transform: translateY(14px); }
+      58%, 88% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-8px); }
     }
 
-    .monitor-base {
-      width: 48%;
-      height: 22px;
-      margin: 12px auto 0;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #ffd439, #ff930f);
-      border: 4px solid var(--ink);
-      box-shadow: 0 7px 0 rgba(0,0,0,.18);
+    @keyframes dotPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
-    .product-panels {
+    @keyframes flyerDeliver {
+      0%, 45% { opacity: 0; transform: translateX(-42px) rotate(-8deg) scale(.82); }
+      60%, 88% { opacity: 1; transform: translateX(0) rotate(3deg) scale(1); }
+      100% { opacity: 0; transform: translateX(26px) rotate(7deg) scale(1.03); }
+    }
+
+    @keyframes stampPop {
+      0%, 50% { opacity: 0; transform: rotate(-8deg) scale(.7); }
+      60%, 90% { opacity: 1; transform: rotate(-8deg) scale(1); }
+      100% { opacity: 0; transform: rotate(-8deg) scale(.9); }
+    }
+
+    .proof-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin-bottom: 20px;
     }
 
-    .chunk-panel {
-      background: linear-gradient(180deg, #dbff72, #9ff40d 72%, #7bd000);
-      padding: 20px;
+    .proof {
+      border: 3px solid var(--white);
+      padding: 24px;
+      min-height: 220px;
+      display: grid;
+      align-content: space-between;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,0));
     }
 
-    .chunk-panel::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,.28), transparent 34%);
-      pointer-events: none;
+    .proof b {
+      color: var(--lime);
+      font-family: Anton, Impact, sans-serif;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      line-height: .85;
+      font-weight: 400;
     }
 
-    .chunk-panel.orange { border-color: var(--ink); }
-    .chunk-panel h2,
-    .zone-title,
-    .poll-title,
-    .machine-title {
-      font-family: 'Baloo 2', cursive;
-      line-height: .95;
+    .proof p {
+      margin: 18px 0 0;
+      max-width: 40ch;
+      color: rgba(255,255,255,.76);
+      line-height: 1.55;
+      font-weight: 650;
     }
 
-    .chunk-panel h2 {
-      font-size: 1.48rem;
-      margin-bottom: 10px;
-      color: var(--purple);
-      text-shadow: 1px 1px 0 rgba(255,255,255,.55);
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .chunk-panel p {
-      color: #23113f;
-      font-weight: 700;
-    }
-
-    .zone-section,
-    .poll-box,
-    .machine-banner,
-    .footer-bar {
-      background: linear-gradient(180deg, #fffbdb, #ffd85e 18%, #ffb61a 100%);
-      margin-bottom: 20px;
+    .step {
+      border: 3px solid var(--line);
+      background: var(--paper);
+      min-height: 260px;
       padding: 22px;
+      box-shadow: 8px 8px 0 var(--line);
     }
 
-    .zone-section {
-      border: 5px solid var(--ink);
-      border-radius: 30px;
+    .step-number {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      background: var(--ink);
+      color: var(--white);
+      font-weight: 950;
+      margin-bottom: 36px;
+    }
+
+    .step h3 {
+      margin: 0;
+      font-family: Anton, Impact, sans-serif;
+      font-size: 2.3rem;
+      line-height: .92;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .step p {
+      margin: 14px 0 0;
+      color: var(--graphite);
+      line-height: 1.55;
+      font-weight: 650;
+    }
+
+    .checkout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .checkout-panel {
+      border: 3px solid var(--line);
+      background: var(--white);
+      padding: 28px;
       box-shadow: var(--shadow);
     }
 
-    .zone-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--purple);
-      text-shadow: 2px 2px 0 rgba(255,255,255,.5);
-      margin-bottom: 14px;
+    .checkout-panel h2 {
+      font-size: clamp(3rem, 6vw, 6rem);
     }
 
-    .zone-sub {
-      font-weight: 700;
-      color: #3a214f;
-      margin-bottom: 18px;
+    .checkout-panel p {
+      max-width: 58ch;
+      margin: 18px 0 0;
+      color: var(--graphite);
+      line-height: 1.6;
+      font-weight: 650;
     }
 
-    .arcade-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-    }
-
-    .arcade-card {
-      min-height: 154px;
-      border: 5px solid var(--ink);
-      border-radius: 24px;
-      background: linear-gradient(180deg, #7d46df, #5226ac 62%, #331364);
-      padding: 16px 14px;
-      box-shadow: 0 9px 0 rgba(0,0,0,.18);
+    .buy-card {
+      border: 3px solid var(--line);
+      background: var(--ink);
       color: var(--white);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .arcade-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,.22), transparent 28%);
-      pointer-events: none;
-    }
-
-    .arcade-card .icon {
-      font-size: 2rem;
-      filter: drop-shadow(2px 2px 0 rgba(0,0,0,.25));
-    }
-
-    .arcade-card h3 {
-      font-family: 'Baloo 2', cursive;
-      font-size: 1.18rem;
-      line-height: .98;
-      text-shadow: 2px 2px 0 rgba(0,0,0,.35);
-    }
-
-    .arcade-card p {
-      font-size: .88rem;
-      color: rgba(255,255,255,.88);
-      font-weight: 700;
-    }
-
-    .poll-box {
-      background: linear-gradient(180deg, #d7ff69, #acef11 72%, #88d603 100%);
-    }
-
-    .poll-title {
-      font-size: clamp(1.9rem, 4vw, 2.7rem);
-      color: var(--purple);
-      text-shadow: 2px 2px 0 rgba(255,255,255,.55);
-      margin-bottom: 6px;
-    }
-
-    .poll-question {
-      font-family: 'Baloo 2', cursive;
-      font-size: 1.25rem;
-      line-height: 1.05;
-      margin-bottom: 16px;
-      color: #29144a;
-    }
-
-    .poll-options {
+      padding: 24px;
+      box-shadow: 8px 8px 0 var(--line);
       display: grid;
-      gap: 12px;
-      margin-bottom: 14px;
+      align-content: space-between;
+      min-height: 330px;
     }
 
-    .poll-option {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 14px 16px;
-      border: 4px solid var(--ink);
-      border-radius: 20px;
-      background: rgba(255,255,255,.7);
-      box-shadow: 0 7px 0 rgba(0,0,0,.16);
-      font-family: 'Baloo 2', cursive;
-      font-weight: 800;
+    .buy-card .price {
+      font-family: Anton, Impact, sans-serif;
+      font-size: 7rem;
+      line-height: .85;
+      font-weight: 400;
     }
 
-    .poll-option span:last-child {
-      min-width: 84px;
-      text-align: right;
-      color: var(--purple);
+    .buy-card p {
+      color: rgba(255,255,255,.72);
+      line-height: 1.55;
+      font-weight: 650;
+      margin: 12px 0 22px;
     }
 
-    .poll-note {
-      color: #2f164d;
-      font-weight: 800;
-      font-size: .98rem;
-    }
-
-    .machine-banner {
-      background: linear-gradient(180deg, #ff9158, #ff6c1f 58%, #e44d00 100%);
-      color: var(--white);
-    }
-
-    .machine-shell {
-      display: grid;
-      grid-template-columns: 1.18fr .82fr;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .machine-title {
-      font-size: clamp(2.2rem, 4vw, 3.3rem);
-      line-height: .9;
-      margin-bottom: 10px;
-      text-shadow: 3px 3px 0 rgba(0,0,0,.32);
-    }
-
-    .machine-text {
-      font-size: 1.02rem;
-      max-width: 40ch;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-shadow: 1px 1px 0 rgba(0,0,0,.18);
-    }
-
-    .machine-cta-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100%;
-    }
-
-    .machine-cta {
+    .buy-card .btn {
       width: 100%;
-      max-width: 280px;
-      text-align: center;
-      background: linear-gradient(180deg, #fff471, #ffd731 60%, #ff9a15);
       color: var(--ink);
+      background: var(--lime);
+      box-shadow: 7px 7px 0 var(--white);
     }
 
-    .footer-bar {
-      background: linear-gradient(180deg, #fffcc8, #ffe86e 22%, #ffc22a 100%);
+    .footer {
+      background: var(--ink);
+      color: var(--white);
+      padding: 30px 0;
+    }
+
+    .footer-inner {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
-      gap: 14px;
-    }
-
-    .footer-links {
-      display: flex;
+      justify-content: space-between;
+      gap: 20px;
       flex-wrap: wrap;
-      gap: 10px;
+      color: rgba(255,255,255,.7);
+      font-size: .84rem;
+      font-weight: 750;
     }
 
-    .footer-link {
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 4px solid var(--ink);
-      background: rgba(255,255,255,.72);
-      box-shadow: 0 6px 0 rgba(0,0,0,.14);
-      font-family: 'Baloo 2', cursive;
-      font-weight: 800;
+    .footer-brand {
+      color: var(--white);
+      font-weight: 1000;
     }
 
-    .footer-copy {
-      font-family: 'Baloo 2', cursive;
-      font-size: .95rem;
-      font-weight: 800;
-      color: #4a1d7d;
-    }
-
-    @media (max-width: 1080px) {
-      .arcade-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    @media (max-width: 900px) {
-      .hero,
-      .product-panels,
-      .machine-shell,
-      .arcade-grid,
-      .hero-preview,
-      .hero-copy,
-      .hero {
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-head,
+      .chat-demo,
+      .checkout {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        display: grid;
+      .hero-grid {
+        min-height: auto;
+        max-height: none;
+        padding-top: 34px;
       }
 
-      .product-panels { grid-template-columns: 1fr; }
-      .machine-shell { grid-template-columns: 1fr; }
-      .arcade-grid { grid-template-columns: repeat(2, 1fr); }
+      .product-wall {
+        min-height: 500px;
+      }
+
+      .poster-stage {
+        height: 500px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .chat-panel,
+      .delivery-panel {
+        min-height: 340px;
+      }
     }
 
-    @media (max-width: 620px) {
-      .page { width: min(100% - 14px, 1180px); }
-      .portal-shell { padding: 12px; border-radius: 24px; }
-      .topbar,
-      .hero-copy,
-      .hero-preview,
-      .chunk-panel,
-      .zone-section,
-      .poll-box,
-      .machine-banner,
-      .footer-bar { border-radius: 22px; }
-      .top-links,
-      .footer-links,
-      .cta-row { justify-content: center; }
-      .arcade-grid { grid-template-columns: 1fr; }
-      .screen { min-height: 300px; }
-      .screen-label { max-width: 9ch; }
-      .bubble,
-      .sticker,
-      .tube { display: none; }
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100% - 22px, 1180px);
+      }
+
+      .topbar-inner {
+        min-height: auto;
+        padding: 12px 0;
+        align-items: flex-start;
+      }
+
+      .brand-text small,
+      .nav a:not(.buy-mini) {
+        display: none;
+      }
+
+      .nav .buy-mini {
+        min-height: 42px;
+        margin-left: 0;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 15.6vw, 4.18rem);
+        max-width: 100%;
+      }
+
+      .hero-title-kicker {
+        -webkit-text-stroke-width: 1px;
+        text-stroke-width: 1px;
+      }
+
+      .price-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .price-strip div + div {
+        border-left: 0;
+        border-top: 3px solid var(--line);
+      }
+
+      .product-wall {
+        min-height: 420px;
+      }
+
+      .poster-stage {
+        height: 420px;
+      }
+
+      .flyer {
+        width: 170px;
+      }
+
+      .flyer.one {
+        width: 160px;
+      }
+
+      .flyer.two {
+        width: 182px;
+      }
+
+      .flyer.three {
+        width: 168px;
+      }
+
+      .flyer-four {
+        width: 158px;
+      }
+
+      .flyer.one {
+        left: 0;
+        top: 56px;
+      }
+
+      .flyer.two {
+        right: 0;
+      }
+
+      .flyer.three {
+        right: 38px;
+        bottom: 30px;
+      }
+
+      .flyer-title {
+        font-size: 2rem;
+      }
+
+      .flyer.two .flyer-title,
+      .flyer.three .flyer-title {
+        font-size: 1.72rem;
+      }
+
+      .badge {
+        width: 96px;
+        height: 96px;
+        font-size: .76rem;
+        right: 0;
+        bottom: 112px;
+      }
+
+      .category-grid,
+      .proof-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .chat-demo {
+        padding: 12px;
+      }
+
+      .chat-panel,
+      .delivery-panel {
+        min-height: 310px;
+      }
+
+      .chat-bubble {
+        font-size: .88rem;
+      }
+
+      .delivered-flyer {
+        width: min(76%, 230px);
+      }
+
+      .section {
+        padding: 46px 0;
+      }
+
+      .proof,
+      .step {
+        min-height: 210px;
+      }
+
+      .buy-card .price {
+        font-size: 5.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+
+      .delivered-flyer,
+      .chat-bubble,
+      .delivery-panel::before {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="tube one"></div>
-    <div class="tube two"></div>
-    <div class="bubble one"></div>
-    <div class="bubble two"></div>
-    <div class="bubble three"></div>
-    <div class="sticker one">NEW DROP!</div>
-    <div class="sticker two">POST FAST ⚡</div>
-
-    <div class="portal-shell">
-      <header class="topbar">
-        <a class="logo" href="../../index.html">Shop<span>InnerG</span></a>
-        <nav class="top-links" aria-label="Promo categories">
-          <a class="nav-bubble" href="#zones">Templates</a>
-          <a class="nav-bubble" href="#zones">Beauty</a>
-          <a class="nav-bubble" href="#zones">Food</a>
-          <a class="nav-bubble" href="#zones">Events</a>
-          <a class="nav-bubble" href="#zones">Credit</a>
-          <a class="nav-bubble" href="#zones">Club Promo</a>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="#top" aria-label="OWNYOURWEB">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span class="brand-text">
+            <strong>OWNYOURWEB</strong>
+            <small>part of the INNERGINTEL ECOSYSTEM</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#inside">Inside</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#checkout">Checkout</a>
+          <a class="buy-mini" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy $10</a>
         </nav>
-        <div class="mini-badge">Digital Download • $10</div>
-      </header>
+      </div>
+    </header>
 
+    <main id="top">
       <section class="hero">
-        <div class="hero-copy">
-          <div class="portal-tag">Promo Portal 2003</div>
-          <h1>15 Plug &amp; Play Flyer Templates</h1>
-          <p class="subtitle">Your photo here. Your text there. Post-ready in minutes.</p>
-
-          <div class="hero-pills">
-            <div class="pill">Beauty</div>
-            <div class="pill">Food</div>
-            <div class="pill">Events</div>
-            <div class="pill">Credit</div>
-            <div class="pill">Club Promo</div>
-          </div>
-
-          <div class="cta-row">
-            <a class="cta primary" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy The Pack ~ $10</a>
-            <a class="cta secondary" href="#inside">See What’s Inside</a>
-          </div>
-        </div>
-
-        <div class="hero-preview">
-          <div class="monitor">
-            <div class="screen">
-              <div class="screen-label">UNION DESIGN SHOP</div>
-            </div>
-            <div class="monitor-base"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="product-panels" id="inside">
-        <article class="chunk-panel">
-          <h2>15 Ready-Made Layouts</h2>
-          <p>Beauty, food, event, credit, and club promo styles made for fast content days.</p>
-        </article>
-        <article class="chunk-panel">
-          <h2>Easy Photo Swap</h2>
-          <p>Built for simple editing. Replace the image, change the words, and post.</p>
-        </article>
-        <article class="chunk-panel">
-          <h2>Made For Promoters</h2>
-          <p>Perfect for barbers, lash techs, food brands, lounges, party hosts, and service providers.</p>
-        </article>
-      </section>
-
-      <section class="zone-section" id="zones">
-        <h2 class="zone-title">Choose Your Promo Zone</h2>
-        <p class="zone-sub">Pick the lane, swap the photo, and keep the promo moving.</p>
-
-        <div class="arcade-grid">
-          <article class="arcade-card">
-            <div class="icon">💄</div>
-            <h3>Beauty Flyers</h3>
-            <p>Salon drops, lash promos, and service posts.</p>
-          </article>
-          <article class="arcade-card">
-            <div class="icon">💳</div>
-            <h3>Credit Repair Flyers</h3>
-            <p>Clean trust-forward layouts with clear CTA room.</p>
-          </article>
-          <article class="arcade-card">
-            <div class="icon">🍔</div>
-            <h3>Food &amp; Lounge Flyers</h3>
-            <p>Menus, specials, kitchens, bars, and lounge nights.</p>
-          </article>
-          <article class="arcade-card">
-            <div class="icon">☀️</div>
-            <h3>Day Party Flyers</h3>
-            <p>Bright promo energy for outside events and vibes.</p>
-          </article>
-          <article class="arcade-card">
-            <div class="icon">🎵</div>
-            <h3>Club Promo Flyers</h3>
-            <p>Nightlife layouts built for motion, lights, and noise.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="poll-box">
-        <h2 class="poll-title">ShopInnerG Poll</h2>
-        <p class="poll-question">Would you rather spend 2 hours designing… or 2 minutes swapping your photo?</p>
-
-        <div class="poll-options">
-          <div class="poll-option"><span>Start from scratch</span><span>12%</span></div>
-          <div class="poll-option"><span>Plug &amp; play</span><span>88%</span></div>
-        </div>
-
-        <p class="poll-note">Smart creators pick speed.</p>
-      </section>
-
-      <section class="machine-banner">
-        <div class="machine-shell">
+        <div class="wrap hero-grid">
           <div>
-            <h2 class="machine-title">Stop Starting From Zero.</h2>
-            <p class="machine-text">Grab the flyer template pack, customize it, and start posting cleaner promos today.</p>
+            <div class="eyebrow">Digital download • instant checkout</div>
+            <h1><span class="hero-title-kicker">15</span><br>Flyer<br>Templates</h1>
+            <p class="lead">A plug-and-play promo pack for creators, venues, beauty pros, food brands, service businesses, and anyone who needs graphics that look finished before the idea gets cold.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy The Pack</a>
+              <a class="btn secondary" href="#inside">Preview Uses</a>
+            </div>
+            <div class="price-strip" aria-label="Product highlights">
+              <div><b>$10</b><span>one-time payment</span></div>
+              <div><b>15</b><span>ready-made layouts</span></div>
+              <div><b>0</b><span>design degree needed</span></div>
+            </div>
           </div>
-          <div class="machine-cta-wrap">
-            <a class="cta machine-cta" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy Now Through Stripe</a>
+
+          <div class="product-wall" aria-label="Flyer template preview artwork">
+            <div class="poster-stage">
+              <article class="flyer preview one">
+                <img src="assets/union-template-2.jpg" alt="Brunch and Vibes day party flyer template preview">
+              </article>
+              <article class="flyer preview two">
+                <img src="assets/union-template-1.jpg" alt="Love lashes beauty flyer template preview">
+              </article>
+              <article class="flyer preview three">
+                <img src="assets/union-template-3.jpg" alt="Get funded business flyer template preview">
+              </article>
+              <div class="flyer-four" aria-hidden="true"></div>
+              <div class="badge">Swap<br>Text<br>Post</div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-hint"><span>built for quick promo days</span></div>
+      </section>
+
+      <section class="section" id="inside">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>One pack. Many promo needs.</h2>
+            <p>Ready-made flyer layouts for beauty, food, events, nightlife, service offers, and business promotions.</p>
+          </div>
+          <div class="category-grid">
+            <article class="category">
+              <small>01</small>
+              <h3>Beauty Flyers</h3>
+            </article>
+            <article class="category">
+              <small>02</small>
+              <h3>Credit Repair</h3>
+            </article>
+            <article class="category">
+              <small>03</small>
+              <h3>Food &amp; Lounge</h3>
+            </article>
+            <article class="category">
+              <small>04</small>
+              <h3>Day Party</h3>
+            </article>
+            <article class="category">
+              <small>05</small>
+              <h3>Club Promo</h3>
+            </article>
+          </div>
+          <div class="chat-demo" aria-label="Animated chat prompt delivering a flyer design">
+            <div class="chat-panel">
+              <div class="chat-bubble prompt">Create a brunch flyer with orange energy, bold type, and a photo placeholder.</div>
+              <div class="chat-bubble typing" aria-label="Generating design">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="chat-bubble response">Done. Your promo design is ready.</div>
+            </div>
+            <div class="delivery-panel">
+              <div class="delivered-flyer">
+                <img src="assets/union-template-2.jpg" alt="Delivered brunch flyer design preview">
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <footer class="footer-bar">
-        <div class="footer-links">
-          <a class="footer-link" href="#">Safety &amp; Privacy</a>
-          <a class="footer-link" href="#">Terms</a>
-          <a class="footer-link" href="#">Contact</a>
-          <a class="footer-link" href="#">About</a>
-          <a class="footer-link" href="../../index.html">ShopInnerG</a>
+      <section class="section dark">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Design that gets out the way.</h2>
+            <p>The pack is made for the working rhythm: choose a layout, drop in your photo, rewrite the headline, publish the post.</p>
+          </div>
+          <div class="proof-grid">
+            <article class="proof">
+              <b>15</b>
+              <p>Layouts with enough variety for weekly promos, quick launches, and offer tests without rebuilding from a blank canvas.</p>
+            </article>
+            <article class="proof">
+              <b>Fast</b>
+              <p>Useful for social posts, stories, email graphics, event announcements, and service offers when the deadline is already in the room.</p>
+            </article>
+          </div>
         </div>
-        <div class="footer-copy">Promo Portal 2003 // Plug in, swap out, post up.</div>
-      </footer>
-    </div>
+      </section>
+
+      <section class="section amber" id="workflow">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Simple workflow.</h2>
+            <p>Choose a template, update the details, add your visuals, and publish a polished promo faster.</p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">1</span>
+              <h3>Pick a layout</h3>
+              <p>Start with a flyer structure built for common promo categories.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">2</span>
+              <h3>Replace details</h3>
+              <p>Swap your photo, title, colors, date, offer, and contact info.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">3</span>
+              <h3>Post today</h3>
+              <p>Use it to test offers, announce events, and keep content moving.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="checkout">
+        <div class="wrap checkout">
+          <div class="checkout-panel">
+            <div class="eyebrow">OWNYOURWEB release</div>
+            <h2>Make the promo look official.</h2>
+            <p>A practical flyer template pack for creating clean, scroll-stopping promo graphics without starting from scratch.</p>
+          </div>
+          <aside class="buy-card" aria-label="Checkout card">
+            <div>
+              <div class="price">$10</div>
+              <p>Digital download. Easy to customize for events, services, launches, specials, and everyday promotions.</p>
+            </div>
+            <a class="btn" href="https://buy.stripe.com/5kQ8wRgALcSB3T0cyfao80U">Buy Now</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div><span class="footer-brand">OWNYOURWEB</span> • Part of the INNERGINTEL ECOSYSTEM.</div>
+        <div>Digital product page concept</div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
